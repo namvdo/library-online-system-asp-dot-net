@@ -10,6 +10,23 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/03C98CFC-8623-445A-8DB7-B66C6FFA5DEF/c7/73fff4e5/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/Book.cs" />
+        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/BookEntity.cs" />
+        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/BookDAO.cs" />
+        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/CategoryEntity.cs" />
+        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/CategoryDAO.cs" />
+        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/UserEntity.cs" />
+        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/UserDAO.cs" />
+        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Web.config" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectId" id="1jonfi4VVr0mJDb0h5dtCDtCcOR" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -53,7 +70,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604479418243</updated>
-      <workItem from="1604479427184" duration="511000" />
+      <workItem from="1604479427184" duration="1068000" />
     </task>
     <servers />
   </component>
@@ -64,5 +81,23 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1228" height="199" key="GridCell.Tab.0.bottom" timestamp="1604481467142">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1228" height="199" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1604481467142" />
+    <state width="1228" height="199" key="GridCell.Tab.0.center" timestamp="1604481467140">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1228" height="199" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1604481467140" />
+    <state width="1228" height="199" key="GridCell.Tab.0.left" timestamp="1604481467138">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1228" height="199" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1604481467138" />
+    <state width="1228" height="199" key="GridCell.Tab.0.right" timestamp="1604481467141">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1228" height="199" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1604481467141" />
   </component>
 </project>
