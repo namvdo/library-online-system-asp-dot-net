@@ -1,0 +1,1 @@
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="library_online_system_asp_dot_net.MvcApplication" Language="C#" %>
