@@ -4,13 +4,22 @@
     <projectFile>library-online-system-asp-dot-net/library-online-system-asp-dot-net.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9259595f-d1a0-41be-8a2e-c5137665e0a8" name="Default Changelist" comment="" />
+    <list default="true" id="9259595f-d1a0-41be-8a2e-c5137665e0a8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/obj/Debug/library-online-system-asp-dot-net.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/obj/Debug/library-online-system-asp-dot-net.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/obj/Debug/library-online-system-asp-dot-net.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/obj/Debug/library-online-system-asp-dot-net.csprojAssemblyReference.cache" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/03C98CFC-8623-445A-8DB7-B66C6FFA5DEF/bb/65c5759a/Controller.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/03C98CFC-8623-445A-8DB7-B66C6FFA5DEF/c7/73fff4e5/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -24,6 +33,7 @@
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/UserEntity.cs" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/UserDAO.cs" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Web.config" />
+        <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/03C98CFC-8623-445A-8DB7-B66C6FFA5DEF/bb/65c5759a/Controller.cs" />
       </list>
     </option>
   </component>
@@ -71,14 +81,18 @@
       <option name="presentableId" value="Default" />
       <updated>1604479418243</updated>
       <workItem from="1604479427184" duration="1068000" />
+      <workItem from="1604682367699" duration="413000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
