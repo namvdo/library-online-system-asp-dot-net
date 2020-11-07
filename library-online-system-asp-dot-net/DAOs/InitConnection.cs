@@ -1,3 +1,4 @@
+using System;
 using System.Configuration;
 using System.Data.SqlClient;
 using Microsoft.Ajax.Utilities;
@@ -10,8 +11,15 @@ namespace library_online_system_asp_dot_net.Models
         private static SqlConnection _connection;
         private InitConnection()
         {
-            string connectionStr = ConfigurationManager.ConnectionStrings["DBProvider"].ToString();
-            _connection = new SqlConnection(connectionStr);
+            try
+            {
+                string connectionStr = ConfigurationManager.ConnectionStrings["DBProvider"].ToString();
+                _connection = new SqlConnection(connectionStr);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
 
         public static InitConnection GetInstance()

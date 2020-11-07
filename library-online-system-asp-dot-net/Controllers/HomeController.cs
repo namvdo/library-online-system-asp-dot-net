@@ -31,9 +31,10 @@ namespace library_online_system_asp_dot_net.Controllers
             return View();
         }
 
+        [HttpGet]
         public ActionResult SearchResult(string keyword)
         {
-            List<Book> matchedBooks = BookDAO.GetTheMatchedBooks(keyword);
+            var matchedBooks = BookDAO.GetTheMatchedBooks(keyword);
             return View(matchedBooks);
         }
         

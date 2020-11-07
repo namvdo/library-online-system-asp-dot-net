@@ -26,12 +26,12 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/Controllers/HomeController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/BookDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/BookDAO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/Scripts/script.sql" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/Scripts/script.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/InitConnection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/InitConnection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/Book.cs" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/Book.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/Views/Home/SearchResult.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/Views/Home/SearchResult.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/Views/Shared/_Layout.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/Views/Web.config" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/Views/Web.config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/bin/library_online_system_asp_dot_net.dll" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/bin/library_online_system_asp_dot_net.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/bin/library_online_system_asp_dot_net.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/bin/library_online_system_asp_dot_net.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/obj/Debug/library-online-system-asp-dot-net.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/obj/Debug/library-online-system-asp-dot-net.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/obj/Debug/library_online_system_asp_dot_net.dll" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/obj/Debug/library_online_system_asp_dot_net.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/obj/Debug/library_online_system_asp_dot_net.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/obj/Debug/library_online_system_asp_dot_net.pdb" afterDir="false" />
     </list>
@@ -49,6 +49,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/98FAC219-BD4E-4536-93D7-6FDA7BD96AB0/4c/c2bd5c6e/IEnumerable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/03C98CFC-8623-445A-8DB7-B66C6FFA5DEF/c7/73fff4e5/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A2DC1FEA-5182-4AE6-ABBC-7D67533F2261/6c/d1337b5d/DbDataReader.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/RiderProjects/ConsoleApplication1/ConsoleApplication1/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/03C98CFC-8623-445A-8DB7-B66C6FFA5DEF/3c/bac3a763/ActionResult.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/03C98CFC-8623-445A-8DB7-B66C6FFA5DEF/2b/744a4344/RouteCollectionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/98FAC219-BD4E-4536-93D7-6FDA7BD96AB0/cc/6afc7f90/IEnumerator.cs" root0="SKIP_HIGHLIGHTING" />
@@ -76,12 +77,13 @@
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/Author.cs" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/Category.cs" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/User.cs" />
-        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/InitConnection.cs" />
-        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/Book.cs" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Views/Shared/_Layout.cshtml" />
-        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/BookDAO.cs" />
-        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Controllers/HomeController.cs" />
+        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/Book.cs" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Views/Home/SearchResult.cshtml" />
+        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Controllers/HomeController.cs" />
+        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/InitConnection.cs" />
+        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Views/Web.config" />
+        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/BookDAO.cs" />
       </list>
     </option>
   </component>
@@ -97,7 +99,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected=".NET Static Method.library_online_system_asp_dot_net.Models.BookDAO.Main">
     <configuration name="library-online-system-asp-dot-net" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -120,6 +122,27 @@
         <option name="Build" />
       </method>
     </configuration>
+    <configuration name="library_online_system_asp_dot_net.Models.BookDAO.Main" type="DotNetStaticMethod" factoryName=".NET Static Method" temporary="true">
+      <option name="EXE_PATH" value="$APPLICATION_HOME_DIR$/lib/ReSharperHost/JetLauncherILc.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/library-online-system-asp-dot-net/library-online-system-asp-dot-net.csproj" />
+      <option name="PROJECT_TFM" value=".NETFramework,Version=v4.7.1" />
+      <option name="CLASS_NAME" value="library_online_system_asp_dot_net.Models.BookDAO" />
+      <option name="METHOD_NAME" value="Main" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue=".NET Static Method.library_online_system_asp_dot_net.Models.BookDAO.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -131,7 +154,7 @@
       <updated>1604479418243</updated>
       <workItem from="1604479427184" duration="1068000" />
       <workItem from="1604682367699" duration="804000" />
-      <workItem from="1604711881521" duration="14200000" />
+      <workItem from="1604711881521" duration="16296000" />
     </task>
     <servers />
   </component>
@@ -165,38 +188,38 @@
     </state>
     <state x="100" y="55" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.800@0.0.1280.800" timestamp="1604684162565" />
     <state x="100" y="73" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1280.732@0.23.1280.732" timestamp="1604720657055" />
-    <state width="1228" height="261" key="GridCell.Tab.0.bottom" timestamp="1604729385322">
+    <state width="1228" height="75" key="GridCell.Tab.0.bottom" timestamp="1604733963051">
       <screen x="0" y="23" width="1280" height="732" />
     </state>
     <state width="1228" height="199" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1604684235237" />
-    <state width="1228" height="261" key="GridCell.Tab.0.bottom/0.23.1280.732@0.23.1280.732" timestamp="1604729385322" />
-    <state width="1228" height="261" key="GridCell.Tab.0.center" timestamp="1604729385321">
+    <state width="1228" height="75" key="GridCell.Tab.0.bottom/0.23.1280.732@0.23.1280.732" timestamp="1604733963051" />
+    <state width="1228" height="75" key="GridCell.Tab.0.center" timestamp="1604733963050">
       <screen x="0" y="23" width="1280" height="732" />
     </state>
     <state width="1228" height="199" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1604684235233" />
-    <state width="1228" height="261" key="GridCell.Tab.0.center/0.23.1280.732@0.23.1280.732" timestamp="1604729385321" />
-    <state width="1228" height="261" key="GridCell.Tab.0.left" timestamp="1604729385320">
+    <state width="1228" height="75" key="GridCell.Tab.0.center/0.23.1280.732@0.23.1280.732" timestamp="1604733963050" />
+    <state width="1228" height="75" key="GridCell.Tab.0.left" timestamp="1604733963049">
       <screen x="0" y="23" width="1280" height="732" />
     </state>
     <state width="1228" height="199" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1604684235232" />
-    <state width="1228" height="261" key="GridCell.Tab.0.left/0.23.1280.732@0.23.1280.732" timestamp="1604729385320" />
-    <state width="1228" height="261" key="GridCell.Tab.0.right" timestamp="1604729385321">
+    <state width="1228" height="75" key="GridCell.Tab.0.left/0.23.1280.732@0.23.1280.732" timestamp="1604733963049" />
+    <state width="1228" height="75" key="GridCell.Tab.0.right" timestamp="1604733963051">
       <screen x="0" y="23" width="1280" height="732" />
     </state>
     <state width="1228" height="199" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1604684235233" />
-    <state width="1228" height="261" key="GridCell.Tab.0.right/0.23.1280.732@0.23.1280.732" timestamp="1604729385321" />
+    <state width="1228" height="75" key="GridCell.Tab.0.right/0.23.1280.732@0.23.1280.732" timestamp="1604733963051" />
     <state width="286" height="546" key="HiddenNamespacesPopup" timestamp="1604720708638">
       <screen x="0" y="23" width="1280" height="732" />
     </state>
     <state width="286" height="546" key="HiddenNamespacesPopup/0.23.1280.732@0.23.1280.732" timestamp="1604720708638" />
-    <state x="272" y="23" key="RiderGenerateDialog" timestamp="1604728222482">
+    <state x="272" y="23" key="RiderGenerateDialog" timestamp="1604732194877">
       <screen x="0" y="23" width="1280" height="732" />
     </state>
-    <state x="272" y="23" key="RiderGenerateDialog/0.23.1280.732@0.23.1280.732" timestamp="1604728222482" />
-    <state x="100" y="123" width="1080" height="532" key="VCS.FileHistoryDialog" timestamp="1604714223238">
+    <state x="272" y="23" key="RiderGenerateDialog/0.23.1280.732@0.23.1280.732" timestamp="1604732194877" />
+    <state x="100" y="123" width="1080" height="532" key="VCS.FileHistoryDialog" timestamp="1604733370132">
       <screen x="0" y="23" width="1280" height="732" />
     </state>
-    <state x="100" y="123" width="1080" height="532" key="VCS.FileHistoryDialog/0.23.1280.732@0.23.1280.732" timestamp="1604714223238" />
+    <state x="100" y="123" width="1080" height="532" key="VCS.FileHistoryDialog/0.23.1280.732@0.23.1280.732" timestamp="1604733370132" />
     <state x="523" y="259" width="378" height="268" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1604720692457">
       <screen x="0" y="23" width="1280" height="732" />
     </state>
