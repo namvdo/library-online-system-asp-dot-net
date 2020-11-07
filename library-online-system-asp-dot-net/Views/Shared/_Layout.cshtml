@@ -24,7 +24,11 @@
                 <li>@Html.ActionLink("About", "About", "Home")</li>
                 <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 <li>@Html.ActionLink("Test", "Test", "Home")</li>
-
+                <li>
+                    <form class="navbar-form navbar-left" asp-route="Custom">
+                        <input type="text" class="form-control" name="search-query" id="search-query" size="40" placeholder="ISBN, Title, Author, Keyword...">
+                    </form>
+                </li>
             </ul>
         </div>
     </div>

@@ -28,5 +28,11 @@ namespace library_online_system_asp_dot_net.Controllers
             ViewBag.Message = "This is the test page";
             return View();
         }
+        [Route("/Home/Test", Name = "Custom")]
+        public string SearchResult()
+        {
+            return "This is the test page";
+        }
+        
     }
 }

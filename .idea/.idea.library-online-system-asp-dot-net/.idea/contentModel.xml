@@ -27,6 +27,7 @@
         <e p="DAOs" t="Include">
           <e p="BookDAO.cs" t="Include" />
           <e p="CategoryDAO.cs" t="Include" />
+          <e p="InitConnection.cs" t="Include" />
           <e p="UserDAO.cs" t="Include" />
         </e>
         <e p="favicon.ico" t="Include" />
@@ -42,9 +43,12 @@
         <e p="Images" t="Include" />
         <e p="library-online-system-asp-dot-net.csproj" t="IncludeRecursive" />
         <e p="Models" t="Include">
-          <e p="BookEntity.cs" t="Include" />
-          <e p="CategoryEntity.cs" t="Include" />
-          <e p="UserEntity.cs" t="Include" />
+          <e p="Author.cs" t="Include" />
+          <e p="Book.cs" t="Include" />
+          <e p="Borrower.cs" t="Include" />
+          <e p="Category.cs" t="Include" />
+          <e p="Feedback.cs" t="Include" />
+          <e p="Payment.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive" />
         <e p="packages.config" t="Include" />
@@ -76,6 +80,7 @@
             <e p="Contact.cshtml" t="Include" />
             <e p="Home.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
+            <e p="SearchResult.cshtml" t="Include" />
             <e p="Test.cshtml" t="Include" />
           </e>
           <e p="Shared" t="Include">
