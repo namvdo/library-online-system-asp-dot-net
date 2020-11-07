@@ -21,8 +21,7 @@ namespace library_online_system_asp_dot_net
 
             routes.MapRoute(
                 name: "Test",
-                url:"{test}",
-                defaults: new {controller = "Home", action="Test"}
+                url:"{controller}/{action}"
             );
         }
 

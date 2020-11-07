@@ -24,6 +24,11 @@
         <e p="Controllers" t="Include">
           <e p="HomeController.cs" t="Include" />
         </e>
+        <e p="DAOs" t="Include">
+          <e p="BookDAO.cs" t="Include" />
+          <e p="CategoryDAO.cs" t="Include" />
+          <e p="UserDAO.cs" t="Include" />
+        </e>
         <e p="favicon.ico" t="Include" />
         <e p="fonts" t="Include">
           <e p="glyphicons-halflings-regular.eot" t="Include" />
@@ -34,13 +39,11 @@
         </e>
         <e p="Global.asax" t="Include" />
         <e p="Global.asax.cs" t="Include" />
+        <e p="Images" t="Include" />
         <e p="library-online-system-asp-dot-net.csproj" t="IncludeRecursive" />
         <e p="Models" t="Include">
-          <e p="BookDAO.cs" t="Include" />
           <e p="BookEntity.cs" t="Include" />
-          <e p="CategoryDAO.cs" t="Include" />
           <e p="CategoryEntity.cs" t="Include" />
-          <e p="UserDAO.cs" t="Include" />
           <e p="UserEntity.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive" />
@@ -64,6 +67,7 @@
           <e p="jquery.validate.unobtrusive.js" t="Include" />
           <e p="jquery.validate.unobtrusive.min.js" t="Include" />
           <e p="modernizr-2.8.3.js" t="Include" />
+          <e p="script.sql" t="Include" />
         </e>
         <e p="Views" t="Include">
           <e p="_ViewStart.cshtml" t="Include" />

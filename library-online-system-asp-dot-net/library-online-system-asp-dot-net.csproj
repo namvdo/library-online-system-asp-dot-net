@@ -117,14 +117,14 @@
         <Compile Include="App_Start\FilterConfig.cs" />
         <Compile Include="App_Start\RouteConfig.cs" />
         <Compile Include="Controllers\HomeController.cs" />
+        <Compile Include="DAOs\BookDAO.cs" />
+        <Compile Include="DAOs\CategoryDAO.cs" />
+        <Compile Include="DAOs\UserDAO.cs" />
         <Compile Include="Global.asax.cs">
             <DependentUpon>Global.asax</DependentUpon>
         </Compile>
-        <Compile Include="Models\BookDAO.cs" />
         <Compile Include="Models\BookEntity.cs" />
-        <Compile Include="Models\CategoryDAO.cs" />
         <Compile Include="Models\CategoryEntity.cs" />
-        <Compile Include="Models\UserDAO.cs" />
         <Compile Include="Models\UserEntity.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
@@ -150,6 +150,7 @@
         <Content Include="Scripts\jquery.validate.unobtrusive.js" />
         <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
         <Content Include="Scripts\modernizr-2.8.3.js" />
+        <Content Include="Scripts\script.sql" />
         <Content Include="Views\Home\Home.cshtml" />
         <Content Include="Views\Home\Test.cshtml" />
         <Content Include="Web.config" />
@@ -169,6 +170,7 @@
     </ItemGroup>
     <ItemGroup>
         <Folder Include="App_Data" />
+        <Folder Include="Images" />
     </ItemGroup>
     <ItemGroup>
         <Content Include="fonts\glyphicons-halflings-regular.woff2" />
