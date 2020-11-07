@@ -1,4 +1,5 @@
 create DATABASE Library
+
 create table Author(
 	author_id int IDENTITY(1,1),
 	author_name nvarchar(30),
@@ -9,6 +10,7 @@ create table Book(
     book_title nvarchar(200) not null,
     publisher varchar(100) NOT NULL,
 	author nvarchar(50) not null,
+	description nvarchar(300),
     cover_img varchar(100),
 )
 create table Book_Author(

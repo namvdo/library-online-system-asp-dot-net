@@ -1,5 +1,7 @@
 ﻿
+using System.Collections.Generic;
 using System.Web.Mvc;
+using library_online_system_asp_dot_net.Models;
 
 namespace library_online_system_asp_dot_net.Controllers
 {
@@ -28,10 +30,11 @@ namespace library_online_system_asp_dot_net.Controllers
             ViewBag.Message = "This is the test page";
             return View();
         }
-        [Route("/Home/Test", Name = "Custom")]
-        public string SearchResult()
+
+        public ActionResult SearchResult(string keyword)
         {
-            return "This is the test page";
+            List<Book> matchedBooks = BookDAO.GetTheMatchedBooks(keyword);
+            return View(matchedBooks);
         }
         
     }
