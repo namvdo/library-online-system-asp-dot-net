@@ -1,17 +1,19 @@
+@model IEnumerable<library_online_system_asp_dot_net.Models.Book>
 @{
-    Layout = null;
+    Layout = "../Shared/_Layout.cshtml";
 }
 
-<!DOCTYPE html>
 
-<html lang="en">
-<head>
-    <title>title</title>
-</head>
-<body>
-<h3>This is the search page</h3>
 <div>
-
+      @foreach (var book in Model)
+      {
+          <div>
+              @book.BookTitle
+              @book.Isbn
+              @book.Author
+              @book.Publisher
+              @book.CoverImage
+              <br>
+          </div>
+      }
 </div>
-</body>
-</html>
