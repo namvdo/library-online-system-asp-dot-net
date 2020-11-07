@@ -1,6 +1,8 @@
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.EnterpriseServices.Internal;
 using System.Web.Security;
 
 namespace library_online_system_asp_dot_net.Models
@@ -20,11 +22,17 @@ namespace library_online_system_asp_dot_net.Models
                 string title = (string) reader["title"];
                 string publisher = (string) reader["publisher"];
                 string author = (string) reader["author"];
+                string description = (string) reader["description"];
                 string coverImg = (string) reader["cover_img"];
-                books.Add(new Book(isbn, title, publisher, author, coverImg));
+                books.Add(new Book(isbn, title, publisher, author, description, coverImg));
             }
 
             return books;
+        }
+
+        public static void Main()
+        {
+            Console.WriteLine(GetAllBooks());
         }
 
         public static List<Book> GetTheMatchedBooks(string keyword)
@@ -46,8 +54,9 @@ namespace library_online_system_asp_dot_net.Models
                 string title = (string) reader["title"];
                 string publisher = (string) reader["publisher"];
                 string author = (string) reader["author"];
+                string description = (string) reader["description"];
                 string coverImg = (string) reader["cover_img"];
-                matchedBooks.Add(new Book(isbn, title, publisher, author, coverImg));
+                matchedBooks.Add(new Book(isbn, title, publisher, author, description, coverImg));
             }
 
             return matchedBooks;
