@@ -18,6 +18,13 @@ namespace library_online_system_asp_dot_net
                 url: "{controller}/{action}/{id}",
                 defaults: new {controller = "Home", action = "Index", id = UrlParameter.Optional}
             );
+
+            routes.MapRoute(
+                name: "Test",
+                url:"{controller}/{action}"
+            );
         }
+
+        
     }
 }
