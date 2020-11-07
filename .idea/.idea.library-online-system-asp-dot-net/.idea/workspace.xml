@@ -7,8 +7,16 @@
     <list default="true" id="9259595f-d1a0-41be-8a2e-c5137665e0a8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/obj/Debug/library-online-system-asp-dot-net.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/obj/Debug/library-online-system-asp-dot-net.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/App_Start/RouteConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/App_Start/RouteConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/Controllers/HomeController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/Views/Shared/_Layout.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/bin/library_online_system_asp_dot_net.dll" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/bin/library_online_system_asp_dot_net.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/bin/library_online_system_asp_dot_net.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/bin/library_online_system_asp_dot_net.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/library-online-system-asp-dot-net.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/library-online-system-asp-dot-net.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/obj/Debug/library-online-system-asp-dot-net.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/obj/Debug/library-online-system-asp-dot-net.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/obj/Debug/library-online-system-asp-dot-net.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/obj/Debug/library-online-system-asp-dot-net.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/obj/Debug/library_online_system_asp_dot_net.dll" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/obj/Debug/library_online_system_asp_dot_net.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/obj/Debug/library_online_system_asp_dot_net.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/obj/Debug/library_online_system_asp_dot_net.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +29,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/03C98CFC-8623-445A-8DB7-B66C6FFA5DEF/bb/65c5759a/Controller.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/03C98CFC-8623-445A-8DB7-B66C6FFA5DEF/c7/73fff4e5/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/03C98CFC-8623-445A-8DB7-B66C6FFA5DEF/3c/bac3a763/ActionResult.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -34,6 +43,12 @@
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/UserDAO.cs" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Web.config" />
         <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/03C98CFC-8623-445A-8DB7-B66C6FFA5DEF/bb/65c5759a/Controller.cs" />
+        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Views/Home/Home.cshtml" />
+        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Controllers/HomeController.cs" />
+        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Views/Home/Test.cshtml" />
+        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/App_Start/RouteConfig.cs" />
+        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Global.asax.cs" />
+        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Views/Shared/_Layout.cshtml" />
       </list>
     </option>
   </component>
@@ -81,7 +96,8 @@
       <option name="presentableId" value="Default" />
       <updated>1604479418243</updated>
       <workItem from="1604479427184" duration="1068000" />
-      <workItem from="1604682367699" duration="413000" />
+      <workItem from="1604682367699" duration="804000" />
+      <workItem from="1604711881521" duration="1855000" />
     </task>
     <servers />
   </component>
@@ -97,21 +113,29 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1228" height="199" key="GridCell.Tab.0.bottom" timestamp="1604481467142">
+    <state x="100" y="55" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604684162565">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1228" height="199" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1604481467142" />
-    <state width="1228" height="199" key="GridCell.Tab.0.center" timestamp="1604481467140">
+    <state x="100" y="55" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.800@0.0.1280.800" timestamp="1604684162565" />
+    <state width="1228" height="199" key="GridCell.Tab.0.bottom" timestamp="1604684235237">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1228" height="199" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1604481467140" />
-    <state width="1228" height="199" key="GridCell.Tab.0.left" timestamp="1604481467138">
+    <state width="1228" height="199" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1604684235237" />
+    <state width="1228" height="199" key="GridCell.Tab.0.center" timestamp="1604684235233">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1228" height="199" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1604481467138" />
-    <state width="1228" height="199" key="GridCell.Tab.0.right" timestamp="1604481467141">
+    <state width="1228" height="199" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1604684235233" />
+    <state width="1228" height="199" key="GridCell.Tab.0.left" timestamp="1604684235232">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1228" height="199" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1604481467141" />
+    <state width="1228" height="199" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1604684235232" />
+    <state width="1228" height="199" key="GridCell.Tab.0.right" timestamp="1604684235233">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1228" height="199" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1604684235233" />
+    <state x="100" y="123" width="1080" height="532" key="VCS.FileHistoryDialog" timestamp="1604714223238">
+      <screen x="0" y="23" width="1280" height="732" />
+    </state>
+    <state x="100" y="123" width="1080" height="532" key="VCS.FileHistoryDialog/0.23.1280.732@0.23.1280.732" timestamp="1604714223238" />
   </component>
 </project>

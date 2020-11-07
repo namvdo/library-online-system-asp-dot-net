@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿
 using System.Web.Mvc;
 
 namespace library_online_system_asp_dot_net.Controllers
@@ -22,6 +19,13 @@ namespace library_online_system_asp_dot_net.Controllers
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
+            return View();
+        }
+
+        public ActionResult Test()
+        {
+            ViewBag.Title = "This is the test title";
+            ViewBag.Message = "This is the test page";
             return View();
         }
     }
