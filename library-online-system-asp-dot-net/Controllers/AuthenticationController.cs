@@ -1,6 +1,7 @@
 ﻿using library_online_system_asp_dot_net.Models;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.EnterpriseServices.Internal;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -78,9 +79,12 @@ namespace library_online_system_asp_dot_net.Controllers
         {
             if (ModelState.IsValid)
             {
+                Console.WriteLine("Fuck you here: {0}", BorrowerDAO.IsLoginSuccessfully(username, password));
                 if (BorrowerDAO.IsLoginSuccessfully(username, password))
                 {
-                    return RedirectToRoute("Home");
+                    Console.WriteLine("Something here...");
+                    Session["username"] = username;
+                    return RedirectToAction("Index", "Home");
                 }
 
                 ViewBag.Error = "Login failed.";
@@ -93,7 +97,7 @@ namespace library_online_system_asp_dot_net.Controllers
         public ActionResult Logout()
         {
             Session.Clear();
-            return RedirectToRoute("Home");
+            return RedirectToAction("Index", "Home");
         }
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Data;
 using System.Data.SqlClient;
 using library_online_system_asp_dot_net.Models;
@@ -47,6 +48,7 @@ namespace library_online_system_asp_dot_net.DAOs
 
         public static bool IsLoginSuccessfully(string username, string password)
         {
+            Console.WriteLine("username: {0}, {1}", username, password );
             string sql = "select top 1 * from Borrower where username=@username and password=@password";
             SqlCommand cmd = new SqlCommand(sql, InitConnection.GetInstance().GetConnection());
             SqlParameter user = new SqlParameter("@username", SqlDbType.VarChar);
@@ -56,7 +58,7 @@ namespace library_online_system_asp_dot_net.DAOs
             pass.Value = password;
             cmd.Parameters.Add(pass);
             InitConnection.OpenConnection(genericConnection);
-            return cmd.ExecuteNonQuery() == 1;
+            return cmd.ExecuteReader().Read();
         }
     }
 }
