@@ -10,7 +10,7 @@ create table Book(
     book_title nvarchar(200) not null,
     publisher varchar(100) NOT NULL,
 	author nvarchar(50) not null,
-	description nvarchar(300),
+	description nvarchar(500),
     cover_img varchar(100),
 )
 create table Book_Author(

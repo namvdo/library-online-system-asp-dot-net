@@ -2,10 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.EnterpriseServices.Internal;
-using System.Web.Security;
+using library_online_system_asp_dot_net.Models;
 
-namespace library_online_system_asp_dot_net.Models
+namespace library_online_system_asp_dot_net.DAOs
 {
     public class BookDAO
     {

@@ -1,13 +1,20 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace library_online_system_asp_dot_net.Models
 {
     public class Borrower
     {
-        private string username, password, fullname, email;
+        [Required]
+        public string Username { get; set; }
 
-        public string Username { get => username; set => username = value; }
-        public string Password { get => password; set => password = value; }
-        public string Fullname { get => fullname; set => fullname = value; }
-        public string Email { get => email; set => email = value; }
+        [Required]
+        public string Password { get; set; }
+
+        [Required]
+        public string Fullname { get; set; }
+
+        [RegularExpression(@"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}")]
+        public string Email { get; set; }
 
         public Borrower(string username, string password, string fullname, string email)
         {

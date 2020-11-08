@@ -1,9 +1,9 @@
 using System;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
-using Microsoft.Ajax.Utilities;
 
-namespace library_online_system_asp_dot_net.Models
+namespace library_online_system_asp_dot_net.DAOs
 {
     public class InitConnection
     {
@@ -30,6 +30,14 @@ namespace library_online_system_asp_dot_net.Models
         public  SqlConnection GetConnection()
         {
             return _connection;
+        }
+
+        public static void OpenConnection(SqlConnection connection)
+        {
+            if (connection != null && connection.State == ConnectionState.Closed)
+            {
+                connection.Open();
+            }
         }
     }
 }
