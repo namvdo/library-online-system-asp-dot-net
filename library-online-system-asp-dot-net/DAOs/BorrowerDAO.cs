@@ -42,7 +42,7 @@ namespace library_online_system_asp_dot_net.DAOs
             cmd.Parameters.Add(para);
             InitConnection.OpenConnection(genericConnection);
             SqlDataReader reader = cmd.ExecuteReader();
-            return reader.HasRows && reader["username"].Equals(username);
+            return reader.Read();
         }
 
         public static bool IsLoginSuccessfully(string username, string password)

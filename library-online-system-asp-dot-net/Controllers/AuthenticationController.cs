@@ -30,6 +30,9 @@ namespace library_online_system_asp_dot_net.Controllers
 
             string email = form["email"];
             string fullname = form["fullname"];
+            ViewBag.username = username;
+            ViewBag.email = email;
+            ViewBag.fullname = fullname;
             if (username == null || username.Equals("") || password == null || password.Equals("")
             || passRepeat == null || passRepeat.Equals("") || email == null || email.Equals("") ||
             fullname == null || fullname.Equals(""))
