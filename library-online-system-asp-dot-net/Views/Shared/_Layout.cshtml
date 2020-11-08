@@ -22,7 +22,6 @@
             <ul class="nav navbar-nav">
                 <li>@Html.ActionLink("About", "About", "Home")</li>
                 <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                <li>@Html.ActionLink("Register", "Register", "Authentication")</li>
                 <li>
                     @* <form class="navbar-form navbar-left" asp-route="Custom"> *@
                     @*     <input type="text" class="form-control" name="search-query" id="search-query" size="40" placeholder="ISBN, Title, Author, Keyword..."> *@
@@ -32,6 +31,7 @@
                         <input type="text" class="form-control" name="search-query" id="search-query" size="40" placeholder="ISBN, Title, Author, Keyword...">
                     }
                 </li>
+                <li>@Html.ActionLink("Login", "Login", "Authentication")</li>
             </ul>
         </div>
     </div>

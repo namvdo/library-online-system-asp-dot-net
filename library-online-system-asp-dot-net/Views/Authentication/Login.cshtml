@@ -1,18 +1,29 @@
 ﻿@{
     Layout = null;
 }
+@model library_online_system_asp_dot_net.Models.Borrower
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     @Styles.Render("~/Content/css")
-     @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="~/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="~/Content/animate.css">
+    <link rel="stylesheet" href="~/Content/hamburgers.min.css">
+    <link rel="stylesheet" href="~/Content/animsition.min.css">
+    <link rel="stylesheet" href="~/Content/select2.min.css">
+    <link rel="stylesheet" href="~/Content/daterangepicker.css">
+    <link rel="stylesheet" href="~/Content/util.css">
+    <link rel="stylesheet" href="~/Content/main.css">
 </head>
-<body style="background-color: #666666;">
+<body>
 <div class="limiter">
     <div class="container-login100">
         <div class="wrap-login100">
-            <form class="login100-form validate-form" action="${pageContext.request.contextPath}/LoginController" method="POST">
+
+            @using (Html.BeginForm("Login", "Authentication", FormMethod.Post, new {@class = "register-form", @id = "register-form"}))
+            {
                 <span class="login100-form-title p-b-43">
                     Login to continue
                 </span>
@@ -40,17 +51,15 @@
 
                 <div class="text-center p-t-46 p-b-20">
                     <span class="txt2">
-                        Don't have an account? Click <a class="form-recovery" href="./registrationForm.jsp">here</a> to sign up a new one.
+                        Don't have an account? Click @Html.ActionLink("here", "Register", "Authentication") to sign up a new one.
                     </span>
                 </div>
-
-
-            </form>
-
+            }
+            <div class="login100-more" style="background-image: url('../../Images/bg-01.jpg')"></div>
         </div>
     </div>
 </div>
-@Styles.Render("~/Content/css")
-@Scripts.Render("~/bundles/modernizr")
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
 </body>
 </html>

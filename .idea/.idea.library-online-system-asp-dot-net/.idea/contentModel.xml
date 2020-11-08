@@ -15,6 +15,8 @@
         </e>
         <e p="bin" t="ExcludeRecursive" />
         <e p="Content" t="Include">
+          <e p="animate.css" t="Include" />
+          <e p="animsition.min.css" t="Include" />
           <e p="bootstrap-theme.css" t="Include" />
           <e p="bootstrap-theme.css.map" t="Include" />
           <e p="bootstrap-theme.min.css" t="Include" />
@@ -23,9 +25,14 @@
           <e p="bootstrap.css.map" t="Include" />
           <e p="bootstrap.min.css" t="Include" />
           <e p="bootstrap.min.css.map" t="Include" />
+          <e p="daterangepicker.css" t="Include" />
+          <e p="hamburgers.min.css" t="Include" />
+          <e p="main.css" t="Include" />
           <e p="register.css" t="Include" />
           <e p="script.sql" t="Include" />
+          <e p="select2.min.css" t="Include" />
           <e p="Site.css" t="Include" />
+          <e p="util.css" t="Include" />
         </e>
         <e p="Controllers" t="Include">
           <e p="AuthenticationController.cs" t="Include" />
@@ -39,6 +46,7 @@
         </e>
         <e p="favicon.ico" t="Include" />
         <e p="fonts" t="Include">
+          <e p="font-awesome.min.css" t="Include" />
           <e p="glyphicons-halflings-regular.eot" t="Include" />
           <e p="glyphicons-halflings-regular.svg" t="Include" />
           <e p="glyphicons-halflings-regular.ttf" t="Include" />
@@ -48,6 +56,8 @@
         <e p="Global.asax" t="Include" />
         <e p="Global.asax.cs" t="Include" />
         <e p="Images" t="Include">
+          <e p="bg-01.jpg" t="Include" />
+          <e p="Online Library Logo.png" t="Include" />
           <e p="signup-image.png" t="Include" />
         </e>
         <e p="library-online-system-asp-dot-net.csproj" t="IncludeRecursive" />
