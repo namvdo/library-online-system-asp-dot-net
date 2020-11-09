@@ -24,12 +24,10 @@
   <component name="ChangeListManager">
     <list default="true" id="9259595f-d1a0-41be-8a2e-c5137665e0a8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/Controllers/HomeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/BookDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/BookDAO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/InitConnection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/InitConnection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/Book.cs" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/Book.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/Views/Home/SearchResult.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/Views/Home/SearchResult.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/Views/Web.config" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/Views/Web.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/Controllers/AuthenticationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/Controllers/AuthenticationController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/BorrowerDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/BorrowerDAO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/Views/Authentication/Login.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/Views/Authentication/Login.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/Views/Shared/_Layout.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/bin/library_online_system_asp_dot_net.dll" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/bin/library_online_system_asp_dot_net.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/bin/library_online_system_asp_dot_net.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/bin/library_online_system_asp_dot_net.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/obj/Debug/library_online_system_asp_dot_net.dll" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/obj/Debug/library_online_system_asp_dot_net.dll" afterDir="false" />
@@ -44,15 +42,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A2DC1FEA-5182-4AE6-ABBC-7D67533F2261/c1/959e4412/SqlDataReader.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/03C98CFC-8623-445A-8DB7-B66C6FFA5DEF/bb/65c5759a/Controller.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/98FAC219-BD4E-4536-93D7-6FDA7BD96AB0/4c/c2bd5c6e/IEnumerable.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/03C98CFC-8623-445A-8DB7-B66C6FFA5DEF/c7/73fff4e5/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A2DC1FEA-5182-4AE6-ABBC-7D67533F2261/6c/d1337b5d/DbDataReader.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5D97019F-7842-404A-9A90-62A0F80FCAE1/fd/8c441168/WebPageBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/RiderProjects/ConsoleApplication1/ConsoleApplication1/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/03C98CFC-8623-445A-8DB7-B66C6FFA5DEF/3c/bac3a763/ActionResult.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/03C98CFC-8623-445A-8DB7-B66C6FFA5DEF/2b/744a4344/RouteCollectionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/98FAC219-BD4E-4536-93D7-6FDA7BD96AB0/cc/6afc7f90/IEnumerator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/808A782E-B93A-4039-AD4E-344A67668503/64/579eef22/SqlDataReader.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -63,7 +55,6 @@
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/CategoryDAO.cs" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/UserEntity.cs" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/UserDAO.cs" />
-        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Web.config" />
         <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/03C98CFC-8623-445A-8DB7-B66C6FFA5DEF/bb/65c5759a/Controller.cs" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Views/Home/Home.cshtml" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Global.asax.cs" />
@@ -77,13 +68,24 @@
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/Author.cs" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/Category.cs" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/User.cs" />
-        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Views/Shared/_Layout.cshtml" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/Book.cs" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Views/Home/SearchResult.cshtml" />
-        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Controllers/HomeController.cs" />
-        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/InitConnection.cs" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Views/Web.config" />
+        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Scripts/script.sql" />
+        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Controllers/HomeController.cs" />
+        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Views/_ViewStart.cshtml" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/BookDAO.cs" />
+        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/CategoryDAO.cs" />
+        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/InitConnection.cs" />
+        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Web.config" />
+        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/Borrower.cs" />
+        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Content/register.css" />
+        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Views/Authentication/Register.cshtml" />
+        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Content/main.css" />
+        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Views/Shared/_Layout.cshtml" />
+        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Views/Authentication/Login.cshtml" />
+        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/BorrowerDAO.cs" />
+        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Controllers/AuthenticationController.cs" />
       </list>
     </option>
   </component>
@@ -94,16 +96,18 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="sqlserver" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34962717" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.29991716" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected=".NET Static Method.library_online_system_asp_dot_net.Models.BookDAO.Main">
+  <component name="RunManager" selected=".NET Project.library-online-system-asp-dot-net">
     <configuration name="library-online-system-asp-dot-net" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../../../../../Program Files (x86)/IIS Express/iisexpress.exe" />
+      <option name="PROGRAM_PARAMETERS" value="&quot;/config:$PROJECT_DIR$/.idea/config/applicationhost.config&quot; /site:library-online-system-asp-dot-net /apppool:Clr4IntegratedAppPool" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../../../../Program Files (x86)/IIS Express" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <envs>
         <env name="MONO_MANAGED_WATCHER" value="y" />
@@ -116,8 +120,8 @@
       <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
       <option name="PROJECT_KIND" value="Web" />
-      <option name="PROJECT_TFM" value="" />
-      <browser url="http://127.0.0.1:5000/" start="true" />
+      <option name="PROJECT_TFM" value=".NETFramework,Version=v4.6.1" />
+      <browser url="http://localhost:5000/" name="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" start="true" with-js-debugger="true" />
       <method v="2">
         <option name="Build" />
       </method>
@@ -138,6 +142,14 @@
         <option name="Build" />
       </method>
     </configuration>
+    <configuration name="library-online-system-asp-dot-net JavaScript" type="JavascriptDebugType" engineId="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" uri="http://localhost:5000/">
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue=".NET Project.library-online-system-asp-dot-net" />
+      <item itemvalue=".NET Static Method.library_online_system_asp_dot_net.Models.BookDAO.Main" />
+      <item itemvalue="JavaScript Debug.library-online-system-asp-dot-net JavaScript" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue=".NET Static Method.library_online_system_asp_dot_net.Models.BookDAO.Main" />
@@ -155,6 +167,10 @@
       <workItem from="1604479427184" duration="1068000" />
       <workItem from="1604682367699" duration="804000" />
       <workItem from="1604711881521" duration="16296000" />
+      <workItem from="1604822532766" duration="1059000" />
+      <workItem from="1604823839029" duration="3677000" />
+      <workItem from="1604827582533" duration="5055000" />
+      <workItem from="1604832727693" duration="9612000" />
     </task>
     <servers />
   </component>
@@ -179,50 +195,133 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="438" y="287" key="#Chrome_Settings" timestamp="1604822953090">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="438" y="287" key="#Chrome_Settings/0.0.1280.760@0.0.1280.760" timestamp="1604822953090" />
     <state x="0" y="190" key="#SQL_Dialects" timestamp="1604728779205">
       <screen x="0" y="23" width="1280" height="732" />
     </state>
     <state x="0" y="190" key="#SQL_Dialects/0.23.1280.732@0.23.1280.732" timestamp="1604728779205" />
-    <state x="100" y="73" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604720657055">
-      <screen x="0" y="23" width="1280" height="732" />
+    <state x="117" y="236" key="#SQL_Resolution_Scopes" timestamp="1604825596003">
+      <screen x="0" y="0" width="1280" height="760" />
     </state>
+    <state x="117" y="236" key="#SQL_Resolution_Scopes/0.0.1280.760@0.0.1280.760" timestamp="1604825596003" />
+    <state x="441" y="187" key="#Web_Browsers" timestamp="1604823083647">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="441" y="187" key="#Web_Browsers/0.0.1280.760@0.0.1280.760" timestamp="1604823083647" />
+    <state x="100" y="52" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604829410577">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="100" y="52" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.760@0.0.1280.760" timestamp="1604829410577" />
     <state x="100" y="55" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.800@0.0.1280.800" timestamp="1604684162565" />
     <state x="100" y="73" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1280.732@0.23.1280.732" timestamp="1604720657055" />
-    <state width="1228" height="75" key="GridCell.Tab.0.bottom" timestamp="1604733963051">
-      <screen x="0" y="23" width="1280" height="732" />
+    <state width="1238" height="266" key="GridCell.Tab.0.bottom" timestamp="1604846187973">
+      <screen x="0" y="0" width="1280" height="760" />
     </state>
+    <state width="1238" height="266" key="GridCell.Tab.0.bottom/0.0.1280.760@0.0.1280.760" timestamp="1604846187973" />
     <state width="1228" height="199" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1604684235237" />
     <state width="1228" height="75" key="GridCell.Tab.0.bottom/0.23.1280.732@0.23.1280.732" timestamp="1604733963051" />
-    <state width="1228" height="75" key="GridCell.Tab.0.center" timestamp="1604733963050">
-      <screen x="0" y="23" width="1280" height="732" />
+    <state width="1238" height="266" key="GridCell.Tab.0.center" timestamp="1604846187973">
+      <screen x="0" y="0" width="1280" height="760" />
     </state>
+    <state width="1238" height="266" key="GridCell.Tab.0.center/0.0.1280.760@0.0.1280.760" timestamp="1604846187973" />
     <state width="1228" height="199" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1604684235233" />
     <state width="1228" height="75" key="GridCell.Tab.0.center/0.23.1280.732@0.23.1280.732" timestamp="1604733963050" />
-    <state width="1228" height="75" key="GridCell.Tab.0.left" timestamp="1604733963049">
-      <screen x="0" y="23" width="1280" height="732" />
+    <state width="1238" height="266" key="GridCell.Tab.0.left" timestamp="1604846187973">
+      <screen x="0" y="0" width="1280" height="760" />
     </state>
+    <state width="1238" height="266" key="GridCell.Tab.0.left/0.0.1280.760@0.0.1280.760" timestamp="1604846187973" />
     <state width="1228" height="199" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1604684235232" />
     <state width="1228" height="75" key="GridCell.Tab.0.left/0.23.1280.732@0.23.1280.732" timestamp="1604733963049" />
-    <state width="1228" height="75" key="GridCell.Tab.0.right" timestamp="1604733963051">
-      <screen x="0" y="23" width="1280" height="732" />
+    <state width="1238" height="266" key="GridCell.Tab.0.right" timestamp="1604846187973">
+      <screen x="0" y="0" width="1280" height="760" />
     </state>
+    <state width="1238" height="266" key="GridCell.Tab.0.right/0.0.1280.760@0.0.1280.760" timestamp="1604846187973" />
     <state width="1228" height="199" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1604684235233" />
     <state width="1228" height="75" key="GridCell.Tab.0.right/0.23.1280.732@0.23.1280.732" timestamp="1604733963051" />
-    <state width="286" height="546" key="HiddenNamespacesPopup" timestamp="1604720708638">
-      <screen x="0" y="23" width="1280" height="732" />
+    <state width="1238" height="266" key="GridCell.Tab.1.bottom" timestamp="1604846187347">
+      <screen x="0" y="0" width="1280" height="760" />
     </state>
+    <state width="1238" height="266" key="GridCell.Tab.1.bottom/0.0.1280.760@0.0.1280.760" timestamp="1604846187347" />
+    <state width="1238" height="266" key="GridCell.Tab.1.center" timestamp="1604846187347">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1238" height="266" key="GridCell.Tab.1.center/0.0.1280.760@0.0.1280.760" timestamp="1604846187347" />
+    <state width="1238" height="266" key="GridCell.Tab.1.left" timestamp="1604846187347">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1238" height="266" key="GridCell.Tab.1.left/0.0.1280.760@0.0.1280.760" timestamp="1604846187347" />
+    <state width="1238" height="266" key="GridCell.Tab.1.right" timestamp="1604846187347">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1238" height="266" key="GridCell.Tab.1.right/0.0.1280.760@0.0.1280.760" timestamp="1604846187347" />
+    <state width="1238" height="266" key="GridCell.Tab.2.bottom" timestamp="1604846187348">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1238" height="266" key="GridCell.Tab.2.bottom/0.0.1280.760@0.0.1280.760" timestamp="1604846187348" />
+    <state width="1238" height="266" key="GridCell.Tab.2.center" timestamp="1604846187348">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1238" height="266" key="GridCell.Tab.2.center/0.0.1280.760@0.0.1280.760" timestamp="1604846187348" />
+    <state width="1238" height="266" key="GridCell.Tab.2.left" timestamp="1604846187348">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1238" height="266" key="GridCell.Tab.2.left/0.0.1280.760@0.0.1280.760" timestamp="1604846187348" />
+    <state width="1238" height="266" key="GridCell.Tab.2.right" timestamp="1604846187348">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1238" height="266" key="GridCell.Tab.2.right/0.0.1280.760@0.0.1280.760" timestamp="1604846187348" />
+    <state width="1238" height="266" key="GridCell.Tab.3.bottom" timestamp="1604846187349">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1238" height="266" key="GridCell.Tab.3.bottom/0.0.1280.760@0.0.1280.760" timestamp="1604846187349" />
+    <state width="1238" height="266" key="GridCell.Tab.3.center" timestamp="1604846187349">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1238" height="266" key="GridCell.Tab.3.center/0.0.1280.760@0.0.1280.760" timestamp="1604846187349" />
+    <state width="1238" height="266" key="GridCell.Tab.3.left" timestamp="1604846187348">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1238" height="266" key="GridCell.Tab.3.left/0.0.1280.760@0.0.1280.760" timestamp="1604846187348" />
+    <state width="1238" height="266" key="GridCell.Tab.3.right" timestamp="1604846187349">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1238" height="266" key="GridCell.Tab.3.right/0.0.1280.760@0.0.1280.760" timestamp="1604846187349" />
+    <state width="286" height="567" key="HiddenNamespacesPopup" timestamp="1604825343648">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="286" height="567" key="HiddenNamespacesPopup/0.0.1280.760@0.0.1280.760" timestamp="1604825343648" />
     <state width="286" height="546" key="HiddenNamespacesPopup/0.23.1280.732@0.23.1280.732" timestamp="1604720708638" />
     <state x="272" y="23" key="RiderGenerateDialog" timestamp="1604732194877">
       <screen x="0" y="23" width="1280" height="732" />
     </state>
     <state x="272" y="23" key="RiderGenerateDialog/0.23.1280.732@0.23.1280.732" timestamp="1604732194877" />
-    <state x="100" y="123" width="1080" height="532" key="VCS.FileHistoryDialog" timestamp="1604733370132">
-      <screen x="0" y="23" width="1280" height="732" />
+    <state width="328" height="439" key="SqlResolveConfigurable" timestamp="1604825588790">
+      <screen x="0" y="0" width="1280" height="760" />
     </state>
+    <state width="328" height="439" key="SqlResolveConfigurable/0.0.1280.760@0.0.1280.760" timestamp="1604825588790" />
+    <state x="100" y="104" width="1080" height="553" key="VCS.FileHistoryDialog" timestamp="1604829051327">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="100" y="104" width="1080" height="553" key="VCS.FileHistoryDialog/0.0.1280.760@0.0.1280.760" timestamp="1604829051327" />
     <state x="100" y="123" width="1080" height="532" key="VCS.FileHistoryDialog/0.23.1280.732@0.23.1280.732" timestamp="1604733370132" />
+    <state x="233" y="113" key="Vcs.Push.Dialog.v2" timestamp="1604823195086">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="233" y="113" key="Vcs.Push.Dialog.v2/0.0.1280.760@0.0.1280.760" timestamp="1604823195086" />
     <state x="523" y="259" width="378" height="268" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1604720692457">
       <screen x="0" y="23" width="1280" height="732" />
     </state>
     <state x="523" y="259" width="378" height="268" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.23.1280.732@0.23.1280.732" timestamp="1604720692457" />
+    <state x="505" y="0" width="596" height="760" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1604825467201">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="505" y="0" width="596" height="760" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1280.760@0.0.1280.760" timestamp="1604825467201" />
+    <state x="303" y="82" width="672" height="678" key="search.everywhere.popup" timestamp="1604835639327">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="303" y="82" width="672" height="678" key="search.everywhere.popup/0.0.1280.760@0.0.1280.760" timestamp="1604835639327" />
   </component>
 </project>

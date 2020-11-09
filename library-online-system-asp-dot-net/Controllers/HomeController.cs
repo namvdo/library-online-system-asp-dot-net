@@ -1,6 +1,7 @@
 ﻿
 using System.Collections.Generic;
 using System.Web.Mvc;
+using library_online_system_asp_dot_net.DAOs;
 using library_online_system_asp_dot_net.Models;
 
 namespace library_online_system_asp_dot_net.Controllers
@@ -24,12 +25,6 @@ namespace library_online_system_asp_dot_net.Controllers
             return View();
         }
 
-        public ActionResult Test()
-        {
-            ViewBag.Title = "This is the test title";
-            ViewBag.Message = "This is the test page";
-            return View();
-        }
 
         [HttpGet]
         public ActionResult SearchResult(string keyword)
