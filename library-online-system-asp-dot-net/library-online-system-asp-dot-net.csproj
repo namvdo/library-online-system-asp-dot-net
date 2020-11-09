@@ -131,6 +131,7 @@
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Feedback.cs" />
+    <Compile Include="Models\Fine.cs" />
     <Compile Include="Models\GeneralInfo.cs" />
     <Compile Include="Models\Payment.cs" />
     <Compile Include="Models\Borrower.cs" />

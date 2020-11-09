@@ -68,6 +68,7 @@
           <e p="Borrower.cs" t="Include" />
           <e p="Category.cs" t="Include" />
           <e p="Feedback.cs" t="Include" />
+          <e p="Fine.cs" t="Include" />
           <e p="GeneralInfo.cs" t="Include" />
           <e p="Payment.cs" t="Include" />
         </e>
