@@ -63,5 +63,31 @@ namespace library_online_system_asp_dot_net.DAOs
 
             return matchedBooks;
         }
+
+        public static List<Book> GetBooksByCategory(string categoryName)
+        {
+            List<Book> books = new List<Book>();
+            var sql =
+                "select top 5 Book.* from category inner join Book_Category on Category.category_name = " + 
+                "Book_Category.category_name inner join Book on Book_Category.isbn = " +
+                "Book.isbn where Book_Category.category_name=@cateogry";
+            var cmd = new SqlCommand(sql, GenericConnection);
+            var para = new SqlParameter("@category", SqlDbType.VarChar) {Value = categoryName};
+            InitConnection.OpenConnection(GenericConnection);
+            cmd.Parameters.Add(para);
+            SqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                string isbn = (string) reader["isbn"];
+                string title = (string) reader["title"];
+                string publisher = (string) reader["publisher"];
+                int author = (int) reader["author_id"];
+                string description = (string) reader["description"];
+                string coverImg = (string) reader["cover_img"];
+                books.Add(new Book(isbn, title, publisher, author, description, coverImg));
+            }
+
+            return books;
+        }
     }
 }

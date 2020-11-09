@@ -23,53 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9259595f-d1a0-41be-8a2e-c5137665e0a8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/Scripts/modifiedScript.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/contentModel.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/dataSources.local.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/dataSources/0aebb3c1-5863-41d6-8a08-aaf6242297b7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/dataSources/0aebb3c1-5863-41d6-8a08-aaf6242297b7/storage_v2/_src_/database/Library.m7wgbQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/dataSources/0aebb3c1-5863-41d6-8a08-aaf6242297b7/storage_v2/_src_/database/Library.m7wgbQ/schema/INFORMATION_SCHEMA.NBgcMw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/dataSources/0aebb3c1-5863-41d6-8a08-aaf6242297b7/storage_v2/_src_/database/Library.m7wgbQ/schema/db_accessadmin.KqpDJg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/dataSources/0aebb3c1-5863-41d6-8a08-aaf6242297b7/storage_v2/_src_/database/Library.m7wgbQ/schema/db_backupoperator.R9Ifpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/dataSources/0aebb3c1-5863-41d6-8a08-aaf6242297b7/storage_v2/_src_/database/Library.m7wgbQ/schema/db_datareader.To823g.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/dataSources/0aebb3c1-5863-41d6-8a08-aaf6242297b7/storage_v2/_src_/database/Library.m7wgbQ/schema/db_datawriter._tp55w.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/dataSources/0aebb3c1-5863-41d6-8a08-aaf6242297b7/storage_v2/_src_/database/Library.m7wgbQ/schema/db_ddladmin.hGWOrg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/dataSources/0aebb3c1-5863-41d6-8a08-aaf6242297b7/storage_v2/_src_/database/Library.m7wgbQ/schema/db_denydatareader.2lWItw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/dataSources/0aebb3c1-5863-41d6-8a08-aaf6242297b7/storage_v2/_src_/database/Library.m7wgbQ/schema/db_denydatawriter.iqHLwA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/dataSources/0aebb3c1-5863-41d6-8a08-aaf6242297b7/storage_v2/_src_/database/Library.m7wgbQ/schema/db_owner.souIfA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/dataSources/0aebb3c1-5863-41d6-8a08-aaf6242297b7/storage_v2/_src_/database/Library.m7wgbQ/schema/db_securityadmin.Dj5jKg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/dataSources/0aebb3c1-5863-41d6-8a08-aaf6242297b7/storage_v2/_src_/database/Library.m7wgbQ/schema/dbo.sYMBAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/dataSources/0aebb3c1-5863-41d6-8a08-aaf6242297b7/storage_v2/_src_/database/Library.m7wgbQ/schema/guest.2C3iBQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/dataSources/0aebb3c1-5863-41d6-8a08-aaf6242297b7/storage_v2/_src_/database/Library.m7wgbQ/schema/sys.zb4BAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/dataSources/0aebb3c1-5863-41d6-8a08-aaf6242297b7/storage_v2/_src_/database/PRN292_Summer2020_B1.I0y4LA/schema/sys.zb4BAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/dataSources/0aebb3c1-5863-41d6-8a08-aaf6242297b7/storage_v2/_src_/database/master.YiqNvw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/dataSources/0aebb3c1-5863-41d6-8a08-aaf6242297b7/storage_v2/_src_/database/master.YiqNvw/schema/INFORMATION_SCHEMA.NBgcMw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/dataSources/0aebb3c1-5863-41d6-8a08-aaf6242297b7/storage_v2/_src_/database/master.YiqNvw/schema/dbo.sYMBAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/dataSources/0aebb3c1-5863-41d6-8a08-aaf6242297b7/storage_v2/_src_/database/master.YiqNvw/schema/dbo.sYMBAA.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/dataSources/0aebb3c1-5863-41d6-8a08-aaf6242297b7/storage_v2/_src_/database/master.YiqNvw/schema/sys.zb4BAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/projectSettingsUpdater.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/sqldialects.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/riderModule.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/library-online-system-asp-dot-net/config/applicationhost.config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/library-online-system-asp-dot-net/v16/.suo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/Controllers/AuthenticationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/Controllers/AuthenticationController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/BookDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/BookDAO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/CategoryDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/CategoryDAO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/Book.cs" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/Book.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/Category.cs" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/Category.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/bin/library_online_system_asp_dot_net.dll" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/bin/library_online_system_asp_dot_net.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/bin/library_online_system_asp_dot_net.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/bin/library_online_system_asp_dot_net.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/obj/Debug/library-online-system-asp-dot-net.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/obj/Debug/library-online-system-asp-dot-net.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/obj/Debug/library-online-system-asp-dot-net.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/obj/Debug/library-online-system-asp-dot-net.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/obj/Debug/library_online_system_asp_dot_net.dll" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/obj/Debug/library_online_system_asp_dot_net.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/obj/Debug/library_online_system_asp_dot_net.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/obj/Debug/library_online_system_asp_dot_net.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,16 +73,16 @@
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Content/main.css" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Views/Shared/_Layout.cshtml" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Views/Authentication/Login.cshtml" />
-        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/BorrowerDAO.cs" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/GenericDAO.cs" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/GeneralInfo.cs" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/GeneralInfo.cs" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/Fine.cs" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Controllers/AuthenticationController.cs" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/Book.cs" />
-        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/BookDAO.cs" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/Category.cs" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/CategoryDAO.cs" />
+        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/BorrowerDAO.cs" />
+        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/BookDAO.cs" />
       </list>
     </option>
   </component>
@@ -218,7 +173,7 @@
       <workItem from="1604827582533" duration="5055000" />
       <workItem from="1604832727693" duration="9905000" />
       <workItem from="1604915843348" duration="1453000" />
-      <workItem from="1604922294169" duration="9724000" />
+      <workItem from="1604922294169" duration="11556000" />
     </task>
     <servers />
   </component>
@@ -369,9 +324,9 @@
       <screen x="0" y="0" width="1280" height="760" />
     </state>
     <state x="505" y="0" width="596" height="760" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1280.760@0.0.1280.760" timestamp="1604825467201" />
-    <state x="303" y="82" width="672" height="678" key="search.everywhere.popup" timestamp="1604835639327">
+    <state x="304" y="83" width="672" height="678" key="search.everywhere.popup" timestamp="1604939143936">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state x="303" y="82" width="672" height="678" key="search.everywhere.popup/0.0.1280.760@0.0.1280.760" timestamp="1604835639327" />
+    <state x="304" y="83" width="672" height="678" key="search.everywhere.popup/0.0.1280.760@0.0.1280.760" timestamp="1604939143936" />
   </component>
 </project>
