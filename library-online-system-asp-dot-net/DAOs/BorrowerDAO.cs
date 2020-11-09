@@ -5,21 +5,20 @@ using library_online_system_asp_dot_net.Models;
 
 namespace library_online_system_asp_dot_net.DAOs
 {
-    public class BorrowerDAO
+    public static class BorrowerDAO
 
     {
-        private static SqlConnection genericConnection;
+        private static readonly SqlConnection GenericConnection;
 
         static BorrowerDAO()
         {
-            genericConnection = InitConnection.GetInstance().GetConnection();
+            GenericConnection = InitConnection.GetInstance().GetConnection();
         }
         public static int InsertBorrower(Borrower borrower)
         {
             string sql = "insert into Borrower(username,password,name,email) values (@username,@password,@name,@email)";
-            SqlCommand cmd = new SqlCommand(sql, genericConnection);
-            SqlParameter[] para = new SqlParameter[]
-            {
+            SqlCommand cmd = new SqlCommand(sql, GenericConnection);
+            SqlParameter[] para = {
                 new SqlParameter("@username", SqlDbType.VarChar),
                 new SqlParameter("@password", SqlDbType.VarChar),
                 new SqlParameter("@name", SqlDbType.VarChar),
@@ -31,17 +30,17 @@ namespace library_online_system_asp_dot_net.DAOs
             para[3].Value = borrower.Email;
 
             cmd.Parameters.AddRange(para);
-            InitConnection.OpenConnection(genericConnection);
+            InitConnection.OpenConnection(GenericConnection);
             return cmd.ExecuteNonQuery();
         }
 
         public static bool IsUserExisted(string username)
         {
             string sql = "select top 1 username from Borrower where username=@username";
-            SqlCommand cmd = new SqlCommand(sql, InitConnection.GetInstance().GetConnection());
+            SqlCommand cmd = new SqlCommand(sql, GenericConnection); 
             SqlParameter para = new SqlParameter("@username", SqlDbType.VarChar) {Value = username};
             cmd.Parameters.Add(para);
-            InitConnection.OpenConnection(genericConnection);
+            InitConnection.OpenConnection(GenericConnection);
             SqlDataReader reader = cmd.ExecuteReader();
             return reader.Read();
         }
@@ -50,14 +49,14 @@ namespace library_online_system_asp_dot_net.DAOs
         {
             Console.WriteLine("username: {0}, {1}", username, password );
             string sql = "select top 1 * from Borrower where username=@username and password=@password";
-            SqlCommand cmd = new SqlCommand(sql, InitConnection.GetInstance().GetConnection());
+            SqlCommand cmd = new SqlCommand(sql, GenericConnection); 
             SqlParameter user = new SqlParameter("@username", SqlDbType.VarChar);
             SqlParameter pass = new SqlParameter("@password", SqlDbType.VarChar);
             user.Value = username;
             cmd.Parameters.Add(user);
             pass.Value = password;
             cmd.Parameters.Add(pass);
-            InitConnection.OpenConnection(genericConnection);
+            InitConnection.OpenConnection(GenericConnection);
             return cmd.ExecuteReader().Read();
         }
     }

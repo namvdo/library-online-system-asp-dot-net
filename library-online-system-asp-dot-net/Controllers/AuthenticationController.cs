@@ -79,10 +79,8 @@ namespace library_online_system_asp_dot_net.Controllers
         {
             if (ModelState.IsValid)
             {
-                Console.WriteLine("Fuck you here: {0}", BorrowerDAO.IsLoginSuccessfully(username, password));
                 if (BorrowerDAO.IsLoginSuccessfully(username, password))
                 {
-                    Console.WriteLine("Something here...");
                     Session["username"] = username;
                     return RedirectToAction("Index", "Home");
                 }

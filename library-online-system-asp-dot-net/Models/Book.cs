@@ -2,14 +2,15 @@ namespace library_online_system_asp_dot_net.Models
 {
     public class Book
     {
-        private string isbn, bookTitle, publisher, author, description, coverImage;
+        private string isbn, bookTitle, publisher, description, coverImage;
+        private int authorId;
 
-        public Book(string isbn, string bookTitle, string publisher, string author, string description, string coverImage)
+        public Book(string isbn, string bookTitle, string publisher, int authorId, string description, string coverImage)
         {
             this.isbn = isbn;
             this.bookTitle = bookTitle;
             this.publisher = publisher;
-            this.author = author;
+            this.authorId = authorId;
             this.description = description;
             this.coverImage = coverImage;
         }
@@ -43,10 +44,10 @@ namespace library_online_system_asp_dot_net.Models
             set => publisher = value;
         }
 
-        public string Author
+        public int Author
         {
-            get => author;
-            set => author = value;
+            get => authorId;
+            set => authorId = value;
         }
 
         public string CoverImage

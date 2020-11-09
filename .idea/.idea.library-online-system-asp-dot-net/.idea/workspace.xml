@@ -23,7 +23,53 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9259595f-d1a0-41be-8a2e-c5137665e0a8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/Scripts/modifiedScript.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/contentModel.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/dataSources/0aebb3c1-5863-41d6-8a08-aaf6242297b7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/dataSources/0aebb3c1-5863-41d6-8a08-aaf6242297b7/storage_v2/_src_/database/Library.m7wgbQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/dataSources/0aebb3c1-5863-41d6-8a08-aaf6242297b7/storage_v2/_src_/database/Library.m7wgbQ/schema/INFORMATION_SCHEMA.NBgcMw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/dataSources/0aebb3c1-5863-41d6-8a08-aaf6242297b7/storage_v2/_src_/database/Library.m7wgbQ/schema/db_accessadmin.KqpDJg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/dataSources/0aebb3c1-5863-41d6-8a08-aaf6242297b7/storage_v2/_src_/database/Library.m7wgbQ/schema/db_backupoperator.R9Ifpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/dataSources/0aebb3c1-5863-41d6-8a08-aaf6242297b7/storage_v2/_src_/database/Library.m7wgbQ/schema/db_datareader.To823g.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/dataSources/0aebb3c1-5863-41d6-8a08-aaf6242297b7/storage_v2/_src_/database/Library.m7wgbQ/schema/db_datawriter._tp55w.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/dataSources/0aebb3c1-5863-41d6-8a08-aaf6242297b7/storage_v2/_src_/database/Library.m7wgbQ/schema/db_ddladmin.hGWOrg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/dataSources/0aebb3c1-5863-41d6-8a08-aaf6242297b7/storage_v2/_src_/database/Library.m7wgbQ/schema/db_denydatareader.2lWItw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/dataSources/0aebb3c1-5863-41d6-8a08-aaf6242297b7/storage_v2/_src_/database/Library.m7wgbQ/schema/db_denydatawriter.iqHLwA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/dataSources/0aebb3c1-5863-41d6-8a08-aaf6242297b7/storage_v2/_src_/database/Library.m7wgbQ/schema/db_owner.souIfA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/dataSources/0aebb3c1-5863-41d6-8a08-aaf6242297b7/storage_v2/_src_/database/Library.m7wgbQ/schema/db_securityadmin.Dj5jKg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/dataSources/0aebb3c1-5863-41d6-8a08-aaf6242297b7/storage_v2/_src_/database/Library.m7wgbQ/schema/dbo.sYMBAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/dataSources/0aebb3c1-5863-41d6-8a08-aaf6242297b7/storage_v2/_src_/database/Library.m7wgbQ/schema/guest.2C3iBQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/dataSources/0aebb3c1-5863-41d6-8a08-aaf6242297b7/storage_v2/_src_/database/Library.m7wgbQ/schema/sys.zb4BAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/dataSources/0aebb3c1-5863-41d6-8a08-aaf6242297b7/storage_v2/_src_/database/PRN292_Summer2020_B1.I0y4LA/schema/sys.zb4BAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/dataSources/0aebb3c1-5863-41d6-8a08-aaf6242297b7/storage_v2/_src_/database/master.YiqNvw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/dataSources/0aebb3c1-5863-41d6-8a08-aaf6242297b7/storage_v2/_src_/database/master.YiqNvw/schema/INFORMATION_SCHEMA.NBgcMw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/dataSources/0aebb3c1-5863-41d6-8a08-aaf6242297b7/storage_v2/_src_/database/master.YiqNvw/schema/dbo.sYMBAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/dataSources/0aebb3c1-5863-41d6-8a08-aaf6242297b7/storage_v2/_src_/database/master.YiqNvw/schema/dbo.sYMBAA.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/dataSources/0aebb3c1-5863-41d6-8a08-aaf6242297b7/storage_v2/_src_/database/master.YiqNvw/schema/sys.zb4BAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/indexLayout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/projectSettingsUpdater.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/sqldialects.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/riderModule.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/library-online-system-asp-dot-net/config/applicationhost.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/library-online-system-asp-dot-net/v16/.suo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/Controllers/AuthenticationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/Controllers/AuthenticationController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/BookDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/BookDAO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/CategoryDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/CategoryDAO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/Book.cs" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/Book.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/Category.cs" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/Category.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/bin/library_online_system_asp_dot_net.dll" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/bin/library_online_system_asp_dot_net.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/bin/library_online_system_asp_dot_net.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/bin/library_online_system_asp_dot_net.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/obj/Debug/library-online-system-asp-dot-net.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/obj/Debug/library-online-system-asp-dot-net.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/obj/Debug/library-online-system-asp-dot-net.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/obj/Debug/library-online-system-asp-dot-net.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/obj/Debug/library_online_system_asp_dot_net.dll" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/obj/Debug/library_online_system_asp_dot_net.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/obj/Debug/library_online_system_asp_dot_net.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/obj/Debug/library_online_system_asp_dot_net.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,13 +105,11 @@
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/Feedback.cs" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/Author.cs" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/User.cs" />
-        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/Book.cs" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Views/Home/SearchResult.cshtml" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Views/Web.config" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Scripts/script.sql" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Controllers/HomeController.cs" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Views/_ViewStart.cshtml" />
-        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/BookDAO.cs" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/InitConnection.cs" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Web.config" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/Borrower.cs" />
@@ -75,21 +119,28 @@
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Views/Shared/_Layout.cshtml" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Views/Authentication/Login.cshtml" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/BorrowerDAO.cs" />
-        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Controllers/AuthenticationController.cs" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/GenericDAO.cs" />
-        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/Category.cs" />
-        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/CategoryDAO.cs" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/GeneralInfo.cs" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/GeneralInfo.cs" />
+        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/Fine.cs" />
+        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Controllers/AuthenticationController.cs" />
+        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/Book.cs" />
+        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/BookDAO.cs" />
+        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/Category.cs" />
+        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/CategoryDAO.cs" />
       </list>
     </option>
   </component>
   <component name="ProjectId" id="1jonfi4VVr0mJDb0h5dtCDtCcOR" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="sqlserver" />
     <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34962717" />
     <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.29991716" />
@@ -167,7 +218,7 @@
       <workItem from="1604827582533" duration="5055000" />
       <workItem from="1604832727693" duration="9905000" />
       <workItem from="1604915843348" duration="1453000" />
-      <workItem from="1604922294169" duration="5439000" />
+      <workItem from="1604922294169" duration="9724000" />
     </task>
     <servers />
   </component>
@@ -189,6 +240,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -214,87 +266,87 @@
     <state x="100" y="52" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.760@0.0.1280.760" timestamp="1604829410577" />
     <state x="100" y="55" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.800@0.0.1280.800" timestamp="1604684162565" />
     <state x="100" y="73" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1280.732@0.23.1280.732" timestamp="1604720657055" />
-    <state width="1238" height="29" key="GridCell.Tab.0.bottom" timestamp="1604930738858">
+    <state width="1238" height="274" key="GridCell.Tab.0.bottom" timestamp="1604938983749">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1238" height="29" key="GridCell.Tab.0.bottom/0.0.1280.760@0.0.1280.760" timestamp="1604930738858" />
+    <state width="1238" height="274" key="GridCell.Tab.0.bottom/0.0.1280.760@0.0.1280.760" timestamp="1604938983749" />
     <state width="1228" height="199" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1604684235237" />
     <state width="1228" height="75" key="GridCell.Tab.0.bottom/0.23.1280.732@0.23.1280.732" timestamp="1604733963051" />
-    <state width="1238" height="29" key="GridCell.Tab.0.center" timestamp="1604930738858">
+    <state width="1238" height="274" key="GridCell.Tab.0.center" timestamp="1604938983749">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1238" height="29" key="GridCell.Tab.0.center/0.0.1280.760@0.0.1280.760" timestamp="1604930738858" />
+    <state width="1238" height="274" key="GridCell.Tab.0.center/0.0.1280.760@0.0.1280.760" timestamp="1604938983749" />
     <state width="1228" height="199" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1604684235233" />
     <state width="1228" height="75" key="GridCell.Tab.0.center/0.23.1280.732@0.23.1280.732" timestamp="1604733963050" />
-    <state width="1238" height="29" key="GridCell.Tab.0.left" timestamp="1604930738857">
+    <state width="1238" height="274" key="GridCell.Tab.0.left" timestamp="1604938983749">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1238" height="29" key="GridCell.Tab.0.left/0.0.1280.760@0.0.1280.760" timestamp="1604930738857" />
+    <state width="1238" height="274" key="GridCell.Tab.0.left/0.0.1280.760@0.0.1280.760" timestamp="1604938983749" />
     <state width="1228" height="199" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1604684235232" />
     <state width="1228" height="75" key="GridCell.Tab.0.left/0.23.1280.732@0.23.1280.732" timestamp="1604733963049" />
-    <state width="1238" height="29" key="GridCell.Tab.0.right" timestamp="1604930738858">
+    <state width="1238" height="274" key="GridCell.Tab.0.right" timestamp="1604938983749">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1238" height="29" key="GridCell.Tab.0.right/0.0.1280.760@0.0.1280.760" timestamp="1604930738858" />
+    <state width="1238" height="274" key="GridCell.Tab.0.right/0.0.1280.760@0.0.1280.760" timestamp="1604938983749" />
     <state width="1228" height="199" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1604684235233" />
     <state width="1228" height="75" key="GridCell.Tab.0.right/0.23.1280.732@0.23.1280.732" timestamp="1604733963051" />
-    <state width="1238" height="29" key="GridCell.Tab.1.bottom" timestamp="1604930738858">
+    <state width="1238" height="274" key="GridCell.Tab.1.bottom" timestamp="1604938983750">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1238" height="29" key="GridCell.Tab.1.bottom/0.0.1280.760@0.0.1280.760" timestamp="1604930738858" />
-    <state width="1238" height="29" key="GridCell.Tab.1.center" timestamp="1604930738858">
+    <state width="1238" height="274" key="GridCell.Tab.1.bottom/0.0.1280.760@0.0.1280.760" timestamp="1604938983750" />
+    <state width="1238" height="274" key="GridCell.Tab.1.center" timestamp="1604938983750">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1238" height="29" key="GridCell.Tab.1.center/0.0.1280.760@0.0.1280.760" timestamp="1604930738858" />
-    <state width="1238" height="29" key="GridCell.Tab.1.left" timestamp="1604930738858">
+    <state width="1238" height="274" key="GridCell.Tab.1.center/0.0.1280.760@0.0.1280.760" timestamp="1604938983750" />
+    <state width="1238" height="274" key="GridCell.Tab.1.left" timestamp="1604938983749">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1238" height="29" key="GridCell.Tab.1.left/0.0.1280.760@0.0.1280.760" timestamp="1604930738858" />
-    <state width="1238" height="29" key="GridCell.Tab.1.right" timestamp="1604930738858">
+    <state width="1238" height="274" key="GridCell.Tab.1.left/0.0.1280.760@0.0.1280.760" timestamp="1604938983749" />
+    <state width="1238" height="274" key="GridCell.Tab.1.right" timestamp="1604938983750">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1238" height="29" key="GridCell.Tab.1.right/0.0.1280.760@0.0.1280.760" timestamp="1604930738858" />
-    <state width="1238" height="29" key="GridCell.Tab.2.bottom" timestamp="1604930738858">
+    <state width="1238" height="274" key="GridCell.Tab.1.right/0.0.1280.760@0.0.1280.760" timestamp="1604938983750" />
+    <state width="1238" height="274" key="GridCell.Tab.2.bottom" timestamp="1604938983750">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1238" height="29" key="GridCell.Tab.2.bottom/0.0.1280.760@0.0.1280.760" timestamp="1604930738858" />
-    <state width="1238" height="29" key="GridCell.Tab.2.center" timestamp="1604930738858">
+    <state width="1238" height="274" key="GridCell.Tab.2.bottom/0.0.1280.760@0.0.1280.760" timestamp="1604938983750" />
+    <state width="1238" height="274" key="GridCell.Tab.2.center" timestamp="1604938983750">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1238" height="29" key="GridCell.Tab.2.center/0.0.1280.760@0.0.1280.760" timestamp="1604930738858" />
-    <state width="1238" height="29" key="GridCell.Tab.2.left" timestamp="1604930738858">
+    <state width="1238" height="274" key="GridCell.Tab.2.center/0.0.1280.760@0.0.1280.760" timestamp="1604938983750" />
+    <state width="1238" height="274" key="GridCell.Tab.2.left" timestamp="1604938983750">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1238" height="29" key="GridCell.Tab.2.left/0.0.1280.760@0.0.1280.760" timestamp="1604930738858" />
-    <state width="1238" height="29" key="GridCell.Tab.2.right" timestamp="1604930738858">
+    <state width="1238" height="274" key="GridCell.Tab.2.left/0.0.1280.760@0.0.1280.760" timestamp="1604938983750" />
+    <state width="1238" height="274" key="GridCell.Tab.2.right" timestamp="1604938983750">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1238" height="29" key="GridCell.Tab.2.right/0.0.1280.760@0.0.1280.760" timestamp="1604930738858" />
-    <state width="1238" height="29" key="GridCell.Tab.3.bottom" timestamp="1604930738859">
+    <state width="1238" height="274" key="GridCell.Tab.2.right/0.0.1280.760@0.0.1280.760" timestamp="1604938983750" />
+    <state width="1238" height="274" key="GridCell.Tab.3.bottom" timestamp="1604938983750">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1238" height="29" key="GridCell.Tab.3.bottom/0.0.1280.760@0.0.1280.760" timestamp="1604930738859" />
-    <state width="1238" height="29" key="GridCell.Tab.3.center" timestamp="1604930738858">
+    <state width="1238" height="274" key="GridCell.Tab.3.bottom/0.0.1280.760@0.0.1280.760" timestamp="1604938983750" />
+    <state width="1238" height="274" key="GridCell.Tab.3.center" timestamp="1604938983750">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1238" height="29" key="GridCell.Tab.3.center/0.0.1280.760@0.0.1280.760" timestamp="1604930738858" />
-    <state width="1238" height="29" key="GridCell.Tab.3.left" timestamp="1604930738858">
+    <state width="1238" height="274" key="GridCell.Tab.3.center/0.0.1280.760@0.0.1280.760" timestamp="1604938983750" />
+    <state width="1238" height="274" key="GridCell.Tab.3.left" timestamp="1604938983750">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1238" height="29" key="GridCell.Tab.3.left/0.0.1280.760@0.0.1280.760" timestamp="1604930738858" />
-    <state width="1238" height="29" key="GridCell.Tab.3.right" timestamp="1604930738859">
+    <state width="1238" height="274" key="GridCell.Tab.3.left/0.0.1280.760@0.0.1280.760" timestamp="1604938983750" />
+    <state width="1238" height="274" key="GridCell.Tab.3.right" timestamp="1604938983750">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1238" height="29" key="GridCell.Tab.3.right/0.0.1280.760@0.0.1280.760" timestamp="1604930738859" />
+    <state width="1238" height="274" key="GridCell.Tab.3.right/0.0.1280.760@0.0.1280.760" timestamp="1604938983750" />
     <state width="286" height="567" key="HiddenNamespacesPopup" timestamp="1604825343648">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
     <state width="286" height="567" key="HiddenNamespacesPopup/0.0.1280.760@0.0.1280.760" timestamp="1604825343648" />
     <state width="286" height="546" key="HiddenNamespacesPopup/0.23.1280.732@0.23.1280.732" timestamp="1604720708638" />
-    <state x="272" y="0" key="RiderGenerateDialog" timestamp="1604929826172">
+    <state x="272" y="0" key="RiderGenerateDialog" timestamp="1604939052097">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state x="272" y="0" key="RiderGenerateDialog/0.0.1280.760@0.0.1280.760" timestamp="1604929826172" />
+    <state x="272" y="0" key="RiderGenerateDialog/0.0.1280.760@0.0.1280.760" timestamp="1604939052097" />
     <state x="272" y="23" key="RiderGenerateDialog/0.23.1280.732@0.23.1280.732" timestamp="1604732194877" />
     <state width="328" height="439" key="SqlResolveConfigurable" timestamp="1604825588790">
       <screen x="0" y="0" width="1280" height="760" />
