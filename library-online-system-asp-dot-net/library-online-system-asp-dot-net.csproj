@@ -121,6 +121,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DAOs\BookDAO.cs" />
     <Compile Include="DAOs\CategoryDAO.cs" />
+    <Compile Include="DAOs\GenericDAO.cs" />
     <Compile Include="DAOs\InitConnection.cs" />
     <Compile Include="DAOs\BorrowerDAO.cs" />
     <Compile Include="Global.asax.cs">
@@ -130,6 +131,7 @@
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Feedback.cs" />
+    <Compile Include="Models\GeneralInfo.cs" />
     <Compile Include="Models\Payment.cs" />
     <Compile Include="Models\Borrower.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
