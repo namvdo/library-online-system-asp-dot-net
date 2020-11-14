@@ -23,8 +23,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9259595f-d1a0-41be-8a2e-c5137665e0a8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/Utils.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.library-online-system-asp-dot-net/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/BookDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/BookDAO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/CategoryDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/CategoryDAO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/GenericDAO.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/Views/Home/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/Views/Home/SearchResult.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/Views/Home/SearchResult.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/Views/Shared/_Layout.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/bin/library_online_system_asp_dot_net.dll" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/bin/library_online_system_asp_dot_net.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/bin/library_online_system_asp_dot_net.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/bin/library_online_system_asp_dot_net.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/library-online-system-asp-dot-net.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/library-online-system-asp-dot-net.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/obj/Debug/library-online-system-asp-dot-net.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/obj/Debug/library-online-system-asp-dot-net.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/obj/Debug/library-online-system-asp-dot-net.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/obj/Debug/library-online-system-asp-dot-net.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/obj/Debug/library_online_system_asp_dot_net.dll" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/obj/Debug/library_online_system_asp_dot_net.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-online-system-asp-dot-net/obj/Debug/library_online_system_asp_dot_net.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/library-online-system-asp-dot-net/obj/Debug/library_online_system_asp_dot_net.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,10 +73,8 @@
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/Feedback.cs" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/Author.cs" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/User.cs" />
-        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Views/Home/SearchResult.cshtml" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Views/Web.config" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Scripts/script.sql" />
-        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Controllers/HomeController.cs" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Views/_ViewStart.cshtml" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/InitConnection.cs" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Web.config" />
@@ -71,7 +82,6 @@
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Content/register.css" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Views/Authentication/Register.cshtml" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Content/main.css" />
-        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Views/Shared/_Layout.cshtml" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Views/Authentication/Login.cshtml" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/GenericDAO.cs" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/GeneralInfo.cs" />
@@ -80,14 +90,19 @@
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Controllers/AuthenticationController.cs" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/Book.cs" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Models/Category.cs" />
-        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/CategoryDAO.cs" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/BorrowerDAO.cs" />
         <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/BookDAO.cs" />
+        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/Utils.cs" />
+        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/DAOs/CategoryDAO.cs" />
+        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Views/Home/SearchResult.cshtml" />
+        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Controllers/HomeController.cs" />
+        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Views/Shared/_Layout.cshtml" />
+        <option value="$PROJECT_DIR$/library-online-system-asp-dot-net/Views/Home/Index.cshtml" />
       </list>
     </option>
   </component>
   <component name="ProjectId" id="1jonfi4VVr0mJDb0h5dtCDtCcOR" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -173,7 +188,8 @@
       <workItem from="1604827582533" duration="5055000" />
       <workItem from="1604832727693" duration="9905000" />
       <workItem from="1604915843348" duration="1453000" />
-      <workItem from="1604922294169" duration="11556000" />
+      <workItem from="1604922294169" duration="13245000" />
+      <workItem from="1605363658107" duration="5992000" />
     </task>
     <servers />
   </component>
@@ -207,106 +223,106 @@
       <screen x="0" y="23" width="1280" height="732" />
     </state>
     <state x="0" y="190" key="#SQL_Dialects/0.23.1280.732@0.23.1280.732" timestamp="1604728779205" />
-    <state x="117" y="236" key="#SQL_Resolution_Scopes" timestamp="1604825596003">
+    <state x="117" y="236" key="#SQL_Resolution_Scopes" timestamp="1605365673886">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state x="117" y="236" key="#SQL_Resolution_Scopes/0.0.1280.760@0.0.1280.760" timestamp="1604825596003" />
+    <state x="117" y="236" key="#SQL_Resolution_Scopes/0.0.1280.760@0.0.1280.760" timestamp="1605365673886" />
     <state x="441" y="187" key="#Web_Browsers" timestamp="1604823083647">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
     <state x="441" y="187" key="#Web_Browsers/0.0.1280.760@0.0.1280.760" timestamp="1604823083647" />
-    <state x="100" y="52" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604829410577">
+    <state x="100" y="52" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605364092234">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state x="100" y="52" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.760@0.0.1280.760" timestamp="1604829410577" />
+    <state x="100" y="52" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.760@0.0.1280.760" timestamp="1605364092234" />
     <state x="100" y="55" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.800@0.0.1280.800" timestamp="1604684162565" />
     <state x="100" y="73" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1280.732@0.23.1280.732" timestamp="1604720657055" />
-    <state width="1238" height="274" key="GridCell.Tab.0.bottom" timestamp="1604938983749">
+    <state width="1238" height="130" key="GridCell.Tab.0.bottom" timestamp="1605367198975">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1238" height="274" key="GridCell.Tab.0.bottom/0.0.1280.760@0.0.1280.760" timestamp="1604938983749" />
+    <state width="1238" height="130" key="GridCell.Tab.0.bottom/0.0.1280.760@0.0.1280.760" timestamp="1605367198975" />
     <state width="1228" height="199" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1604684235237" />
     <state width="1228" height="75" key="GridCell.Tab.0.bottom/0.23.1280.732@0.23.1280.732" timestamp="1604733963051" />
-    <state width="1238" height="274" key="GridCell.Tab.0.center" timestamp="1604938983749">
+    <state width="1238" height="130" key="GridCell.Tab.0.center" timestamp="1605367198975">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1238" height="274" key="GridCell.Tab.0.center/0.0.1280.760@0.0.1280.760" timestamp="1604938983749" />
+    <state width="1238" height="130" key="GridCell.Tab.0.center/0.0.1280.760@0.0.1280.760" timestamp="1605367198975" />
     <state width="1228" height="199" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1604684235233" />
     <state width="1228" height="75" key="GridCell.Tab.0.center/0.23.1280.732@0.23.1280.732" timestamp="1604733963050" />
-    <state width="1238" height="274" key="GridCell.Tab.0.left" timestamp="1604938983749">
+    <state width="1238" height="130" key="GridCell.Tab.0.left" timestamp="1605367198975">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1238" height="274" key="GridCell.Tab.0.left/0.0.1280.760@0.0.1280.760" timestamp="1604938983749" />
+    <state width="1238" height="130" key="GridCell.Tab.0.left/0.0.1280.760@0.0.1280.760" timestamp="1605367198975" />
     <state width="1228" height="199" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1604684235232" />
     <state width="1228" height="75" key="GridCell.Tab.0.left/0.23.1280.732@0.23.1280.732" timestamp="1604733963049" />
-    <state width="1238" height="274" key="GridCell.Tab.0.right" timestamp="1604938983749">
+    <state width="1238" height="130" key="GridCell.Tab.0.right" timestamp="1605367198975">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1238" height="274" key="GridCell.Tab.0.right/0.0.1280.760@0.0.1280.760" timestamp="1604938983749" />
+    <state width="1238" height="130" key="GridCell.Tab.0.right/0.0.1280.760@0.0.1280.760" timestamp="1605367198975" />
     <state width="1228" height="199" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1604684235233" />
     <state width="1228" height="75" key="GridCell.Tab.0.right/0.23.1280.732@0.23.1280.732" timestamp="1604733963051" />
-    <state width="1238" height="274" key="GridCell.Tab.1.bottom" timestamp="1604938983750">
+    <state width="1238" height="130" key="GridCell.Tab.1.bottom" timestamp="1605367198485">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1238" height="274" key="GridCell.Tab.1.bottom/0.0.1280.760@0.0.1280.760" timestamp="1604938983750" />
-    <state width="1238" height="274" key="GridCell.Tab.1.center" timestamp="1604938983750">
+    <state width="1238" height="130" key="GridCell.Tab.1.bottom/0.0.1280.760@0.0.1280.760" timestamp="1605367198485" />
+    <state width="1238" height="130" key="GridCell.Tab.1.center" timestamp="1605367198485">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1238" height="274" key="GridCell.Tab.1.center/0.0.1280.760@0.0.1280.760" timestamp="1604938983750" />
-    <state width="1238" height="274" key="GridCell.Tab.1.left" timestamp="1604938983749">
+    <state width="1238" height="130" key="GridCell.Tab.1.center/0.0.1280.760@0.0.1280.760" timestamp="1605367198485" />
+    <state width="1238" height="130" key="GridCell.Tab.1.left" timestamp="1605367198485">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1238" height="274" key="GridCell.Tab.1.left/0.0.1280.760@0.0.1280.760" timestamp="1604938983749" />
-    <state width="1238" height="274" key="GridCell.Tab.1.right" timestamp="1604938983750">
+    <state width="1238" height="130" key="GridCell.Tab.1.left/0.0.1280.760@0.0.1280.760" timestamp="1605367198485" />
+    <state width="1238" height="130" key="GridCell.Tab.1.right" timestamp="1605367198485">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1238" height="274" key="GridCell.Tab.1.right/0.0.1280.760@0.0.1280.760" timestamp="1604938983750" />
-    <state width="1238" height="274" key="GridCell.Tab.2.bottom" timestamp="1604938983750">
+    <state width="1238" height="130" key="GridCell.Tab.1.right/0.0.1280.760@0.0.1280.760" timestamp="1605367198485" />
+    <state width="1238" height="130" key="GridCell.Tab.2.bottom" timestamp="1605367198485">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1238" height="274" key="GridCell.Tab.2.bottom/0.0.1280.760@0.0.1280.760" timestamp="1604938983750" />
-    <state width="1238" height="274" key="GridCell.Tab.2.center" timestamp="1604938983750">
+    <state width="1238" height="130" key="GridCell.Tab.2.bottom/0.0.1280.760@0.0.1280.760" timestamp="1605367198485" />
+    <state width="1238" height="130" key="GridCell.Tab.2.center" timestamp="1605367198485">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1238" height="274" key="GridCell.Tab.2.center/0.0.1280.760@0.0.1280.760" timestamp="1604938983750" />
-    <state width="1238" height="274" key="GridCell.Tab.2.left" timestamp="1604938983750">
+    <state width="1238" height="130" key="GridCell.Tab.2.center/0.0.1280.760@0.0.1280.760" timestamp="1605367198485" />
+    <state width="1238" height="130" key="GridCell.Tab.2.left" timestamp="1605367198485">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1238" height="274" key="GridCell.Tab.2.left/0.0.1280.760@0.0.1280.760" timestamp="1604938983750" />
-    <state width="1238" height="274" key="GridCell.Tab.2.right" timestamp="1604938983750">
+    <state width="1238" height="130" key="GridCell.Tab.2.left/0.0.1280.760@0.0.1280.760" timestamp="1605367198485" />
+    <state width="1238" height="130" key="GridCell.Tab.2.right" timestamp="1605367198485">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1238" height="274" key="GridCell.Tab.2.right/0.0.1280.760@0.0.1280.760" timestamp="1604938983750" />
-    <state width="1238" height="274" key="GridCell.Tab.3.bottom" timestamp="1604938983750">
+    <state width="1238" height="130" key="GridCell.Tab.2.right/0.0.1280.760@0.0.1280.760" timestamp="1605367198485" />
+    <state width="1238" height="130" key="GridCell.Tab.3.bottom" timestamp="1605367198486">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1238" height="274" key="GridCell.Tab.3.bottom/0.0.1280.760@0.0.1280.760" timestamp="1604938983750" />
-    <state width="1238" height="274" key="GridCell.Tab.3.center" timestamp="1604938983750">
+    <state width="1238" height="130" key="GridCell.Tab.3.bottom/0.0.1280.760@0.0.1280.760" timestamp="1605367198486" />
+    <state width="1238" height="130" key="GridCell.Tab.3.center" timestamp="1605367198486">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1238" height="274" key="GridCell.Tab.3.center/0.0.1280.760@0.0.1280.760" timestamp="1604938983750" />
-    <state width="1238" height="274" key="GridCell.Tab.3.left" timestamp="1604938983750">
+    <state width="1238" height="130" key="GridCell.Tab.3.center/0.0.1280.760@0.0.1280.760" timestamp="1605367198486" />
+    <state width="1238" height="130" key="GridCell.Tab.3.left" timestamp="1605367198486">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1238" height="274" key="GridCell.Tab.3.left/0.0.1280.760@0.0.1280.760" timestamp="1604938983750" />
-    <state width="1238" height="274" key="GridCell.Tab.3.right" timestamp="1604938983750">
+    <state width="1238" height="130" key="GridCell.Tab.3.left/0.0.1280.760@0.0.1280.760" timestamp="1605367198486" />
+    <state width="1238" height="130" key="GridCell.Tab.3.right" timestamp="1605367198486">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1238" height="274" key="GridCell.Tab.3.right/0.0.1280.760@0.0.1280.760" timestamp="1604938983750" />
-    <state width="286" height="567" key="HiddenNamespacesPopup" timestamp="1604825343648">
+    <state width="1238" height="130" key="GridCell.Tab.3.right/0.0.1280.760@0.0.1280.760" timestamp="1605367198486" />
+    <state width="286" height="567" key="HiddenNamespacesPopup" timestamp="1605364111290">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="286" height="567" key="HiddenNamespacesPopup/0.0.1280.760@0.0.1280.760" timestamp="1604825343648" />
+    <state width="286" height="567" key="HiddenNamespacesPopup/0.0.1280.760@0.0.1280.760" timestamp="1605364111290" />
     <state width="286" height="546" key="HiddenNamespacesPopup/0.23.1280.732@0.23.1280.732" timestamp="1604720708638" />
     <state x="272" y="0" key="RiderGenerateDialog" timestamp="1604939052097">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
     <state x="272" y="0" key="RiderGenerateDialog/0.0.1280.760@0.0.1280.760" timestamp="1604939052097" />
     <state x="272" y="23" key="RiderGenerateDialog/0.23.1280.732@0.23.1280.732" timestamp="1604732194877" />
-    <state width="328" height="439" key="SqlResolveConfigurable" timestamp="1604825588790">
+    <state width="328" height="439" key="SqlResolveConfigurable" timestamp="1605365617388">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="328" height="439" key="SqlResolveConfigurable/0.0.1280.760@0.0.1280.760" timestamp="1604825588790" />
+    <state width="328" height="439" key="SqlResolveConfigurable/0.0.1280.760@0.0.1280.760" timestamp="1605365617388" />
     <state x="100" y="104" width="1080" height="553" key="VCS.FileHistoryDialog" timestamp="1604829051327">
       <screen x="0" y="0" width="1280" height="760" />
     </state>

@@ -67,10 +67,7 @@ namespace library_online_system_asp_dot_net.DAOs
         public static List<Book> GetBooksByCategory(string categoryName)
         {
             List<Book> books = new List<Book>();
-            var sql =
-                "select top 5 Book.* from category inner join Book_Category on Category.category_name = " + 
-                "Book_Category.category_name inner join Book on Book_Category.isbn = " +
-                "Book.isbn where Book_Category.category_name=@cateogry";
+            var sql = "";
             var cmd = new SqlCommand(sql, GenericConnection);
             var para = new SqlParameter("@category", SqlDbType.VarChar) {Value = categoryName};
             InitConnection.OpenConnection(GenericConnection);
