@@ -10,8 +10,9 @@
           <!-- Custom styles for this template -->
     <style>
               body {
-background-color: #8BC6EC;
-background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+                background: #ee9ca7;  /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);  /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #ffdde1, #ee9ca7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
               }
               .MultiCarousel { float: left; overflow: hidden; padding: 15px; width: 100%; position:relative; }
@@ -26,7 +27,7 @@ background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
-    <a class="navbar-brand" href="#">My Logo</a>
+    @Html.ActionLink("Open Book Library", "Index", "Home")
     <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation"> -->
     <!-- <span class="navbar-toggler-icon"></span> -->
     <!-- </button> -->
@@ -63,7 +64,7 @@ background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
             </li>
         </ul>
         <form class="form-inline my-2 my-md-0">
-            <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+            <input class="form-control" type="text" placeholder="Search a book, author..." aria-label="Search">
         </form>
         <ul class="navbar-nav">
             <li class="nav-item active">
@@ -166,6 +167,21 @@ background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
 <style>
     .container {
         width: content-box;
+    }
+    .item img {
+        width: 200px !important;
+        height: 200px !important;
+    }
+    .MultiCarousel .MultiCarousel-inner .item > div {
+        height: 320px !important;
+        border-radius: 10px 10px;
+    }
+    .MultiCarousel .MultiCarousel-inner .item a {
+        padding-bottom: 10px; 
+    }
+    .MultiCarousel .MultiCarousel-inner .action a{
+        text-decoration: none;
+        color:  #FFF;
     }
 </style>
 <hr/>

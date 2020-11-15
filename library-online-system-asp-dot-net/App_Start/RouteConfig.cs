@@ -24,11 +24,11 @@ namespace library_online_system_asp_dot_net
                 url:"{controller}/{action}"
             );
 
-            routes.MapRoute(
-                name: "Search",
-                url:"{controller}/{action}/{keyword}",
-                defaults: new {controller = "Home", action = "SearchResult", keyword = ""}
-                );
+            // routes.MapRoute(
+            //     name: "Search",
+            //     url:"{controller}/{action}/{keyword}",
+            //     defaults: new {controller = "Home", action = "SearchResult", keyword = ""}
+            //     );
             
         }
 
