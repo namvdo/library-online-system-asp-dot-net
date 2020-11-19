@@ -120,6 +120,7 @@
     <Compile Include="Controllers\AuthenticationController.cs" />
     <Compile Include="Controllers\BookRentingController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ReadBookController.cs" />
     <Compile Include="DAOs\BookDAO.cs" />
     <Compile Include="DAOs\CategoryDAO.cs" />
     <Compile Include="DAOs\InitConnection.cs" />
@@ -175,9 +176,11 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\script.sql" />
+    <Content Include="Scripts\scriptwithdata.sql" />
     <Content Include="Views\Authentication\Login.cshtml" />
     <Content Include="Views\Home\SearchResult.cshtml" />
     <Content Include="Views\Home\ViewBook.cshtml" />
+    <Content Include="Views\ReadBook\ReadBook.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

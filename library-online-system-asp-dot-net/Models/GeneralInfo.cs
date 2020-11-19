@@ -8,6 +8,7 @@
         WEEKLY_PAYMENT,
         MONTHLY_PAYMENT,
         PERMENTLY_PAYMENT,
-        ONE_TIME_PAYMENT
+        ONE_TIME_PAYMENT,
+        NO_OF_CHARACTERS_PER_PAGE = 1600
     }
 }
