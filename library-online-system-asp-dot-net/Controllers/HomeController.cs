@@ -35,6 +35,39 @@ namespace library_online_system_asp_dot_net.Controllers
             return View();
         }
 
+        public ActionResult Profile()
+        {
+            
+            string username = (string)Session["username"];
+            ViewBag.borrower = BorrowerDAO.GetBorrowerByUsername(username);
+            ViewBag.reservations = ReservationDAO.GetReservationByUsername(username);
+            ViewBag.message = "";
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Profile(FormCollection f)
+        {
+            string username = (string)Session["username"];
+            string name = f["fullname"];
+            string email = f["email"];
+             double deposit = Convert.ToDouble(f["deposit"]);
+
+            if (BorrowerDAO.UpdateBorrower(name, username, email, deposit)>0)
+            {
+                ViewBag.borrower = BorrowerDAO.GetBorrowerByUsername(username);
+                ViewBag.reservations = ReservationDAO.GetReservationByUsername(username);
+                ViewBag.message = "Update Successful!";
+            }
+            else
+            {
+                ViewBag.message = "Update Failed!";
+            }
+
+             return View();
+            
+
+        }
+
 
         [HttpGet]
         public ActionResult SearchResult(string keyword)
