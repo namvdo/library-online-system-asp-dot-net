@@ -127,7 +127,6 @@ namespace library_online_system_asp_dot_net.DAOs
             {
                 return (float) reader.GetDouble(1);
             }
-
             return -1;
         }
 
@@ -174,7 +173,6 @@ namespace library_online_system_asp_dot_net.DAOs
                  
 
                 Regex regex = new Regex("([\\s.,-]+)");
-                Console.WriteLine("islastpage: " + isLastPage);
                 if (!isLastPage)
                 {
                     while (true)
@@ -209,7 +207,6 @@ namespace library_online_system_asp_dot_net.DAOs
                 string coverImg = (string) reader["cover_img"];
                 books.Add(new Book(isbn, title, publisher, author, description, coverImg));
             }
-
             return books;
         }
     }

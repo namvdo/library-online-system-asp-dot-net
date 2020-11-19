@@ -173,6 +173,8 @@
                                 <div class="pad15">
                                     <img src="@book.CoverImage" class="img-fluid mx-auto d-block">
                                     <a class="text-center" style="display:block"href="~/Views/Home/BookDetail.cshtml">@book.BookTitle</a>
+                                    @Html.ActionLink(book.BookTitle, "")
+                                    <a href="text-center" style="display:block" href></a>
                                     <div class="action">
                                             <a href="@Url.Action("ViewBook", "Home", new {buy = true, isbn=book.Isbn})">
                                                 <button class="btn btn-primary">Buy</button>
