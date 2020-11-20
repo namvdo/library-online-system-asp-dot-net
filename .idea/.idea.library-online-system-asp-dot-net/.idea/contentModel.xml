@@ -7,7 +7,9 @@
     <e p="C:\Users\Nam\AppData\Roaming\JetBrains\Rider2020.2\extensions" t="IncludeRecursive" />
     <e p="C:\Users\Nam\AppData\Roaming\JetBrains\Rider2020.2\javascript\extLibs\http_getbootstrap.com_docs_4.0_dist_css_bootstrap.css" t="IncludeRecursive" />
     <e p="C:\Users\Nam\Desktop\c# project\library-online-system-asp-dot-net" t="IncludeFlat">
+      <e p=".git\info\exclude" t="IncludeRecursive" />
       <e p="library-online-system-asp-dot-net" t="IncludeRecursive">
+        <e p=".gitignore" t="Include" />
         <e p="App_Data" t="Include" />
         <e p="App_Start" t="Include">
           <e p="BundleConfig.cs" t="Include" />
@@ -41,12 +43,14 @@
           <e p="BookRentingController.cs" t="Include" />
           <e p="HomeController.cs" t="Include" />
           <e p="ReadBookController.cs" t="Include" />
+          <e p="ViewBookController.cs" t="Include" />
         </e>
         <e p="DAOs" t="Include">
           <e p="BookDAO.cs" t="Include" />
           <e p="BorrowerDAO.cs" t="Include" />
           <e p="CategoryDAO.cs" t="Include" />
           <e p="InitConnection.cs" t="Include" />
+          <e p="ReservationDAO.cs" t="Include" />
           <e p="Utils.cs" t="Include" />
         </e>
         <e p="favicon.ico" t="Include" />
@@ -75,6 +79,7 @@
           <e p="Fine.cs" t="Include" />
           <e p="GeneralInfo.cs" t="Include" />
           <e p="Payment.cs" t="Include" />
+          <e p="Reservation.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive" />
         <e p="packages.config" t="Include" />
@@ -110,8 +115,8 @@
             <e p="About.cshtml" t="Include" />
             <e p="Contact.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
+            <e p="Profile.cshtml" t="Include" />
             <e p="SearchResult.cshtml" t="Include" />
-            <e p="ViewBook.cshtml" t="Include" />
           </e>
           <e p="ReadBook" t="Include">
             <e p="ReadBook.cshtml" t="Include" />
@@ -119,6 +124,9 @@
           <e p="Shared" t="Include">
             <e p="_Layout.cshtml" t="Include" />
             <e p="Error.cshtml" t="Include" />
+          </e>
+          <e p="ViewBook" t="Include">
+            <e p="ViewBook.cshtml" t="Include" />
           </e>
           <e p="Web.config" t="Include" />
         </e>

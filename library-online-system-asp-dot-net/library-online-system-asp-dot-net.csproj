@@ -121,10 +121,12 @@
     <Compile Include="Controllers\BookRentingController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ReadBookController.cs" />
+    <Compile Include="Controllers\ViewBookController.cs" />
     <Compile Include="DAOs\BookDAO.cs" />
     <Compile Include="DAOs\CategoryDAO.cs" />
     <Compile Include="DAOs\InitConnection.cs" />
     <Compile Include="DAOs\BorrowerDAO.cs" />
+    <Compile Include="DAOs\ReservationDAO.cs" />
     <Compile Include="DAOs\Utils.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -137,9 +139,11 @@
     <Compile Include="Models\GeneralInfo.cs" />
     <Compile Include="Models\Payment.cs" />
     <Compile Include="Models\Borrower.cs" />
+    <Compile Include="Models\Reservation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".gitignore" />
     <Content Include="Content\animate.css" />
     <Content Include="Content\animsition.min.css" />
     <Content Include="Content\bookview.css" />
@@ -179,8 +183,8 @@
     <Content Include="Scripts\scriptwithdata.sql" />
     <Content Include="Views\Authentication\Login.cshtml" />
     <Content Include="Views\Home\SearchResult.cshtml" />
-    <Content Include="Views\Home\ViewBook.cshtml" />
     <Content Include="Views\ReadBook\ReadBook.cshtml" />
+    <Content Include="Views\ViewBook\ViewBook.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -196,6 +200,7 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Authentication\Register.cshtml" />
+    <Content Include="Views\Home\Profile.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -144,7 +144,7 @@ namespace library_online_system_asp_dot_net.DAOs
             }
         }
 
-
+        private static int currentPosition = 0;
         public static string ReadBookFromPage(int bookCopyId, int page)
         {
             StringBuilder stringBuilder = new StringBuilder();
@@ -188,8 +188,11 @@ namespace library_online_system_asp_dot_net.DAOs
                         }
                     } 
                 }
-                stringBuilder.Append(contentFromBook.Substring(startingPosition, endingPosition));
+                stringBuilder.Append(contentFromBook.Substring(Math.Max(currentPosition, startingPosition), endingPosition));
+                currentPosition = endingPosition;
+
             }
+            
 
             return stringBuilder.ToString();
         }
