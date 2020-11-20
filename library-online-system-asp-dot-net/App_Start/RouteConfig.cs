@@ -12,10 +12,10 @@ namespace library_online_system_asp_dot_net
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-
+            // id
             routes.MapRoute(
                 name: "Default",
-                url: "{controller}/{action}/{id}",
+                url: "{controller}/{action}",
                 defaults: new {controller = "Home", action = "Index", id = UrlParameter.Optional}
             );
 

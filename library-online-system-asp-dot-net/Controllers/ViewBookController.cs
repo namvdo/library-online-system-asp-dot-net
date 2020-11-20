@@ -1,3 +1,4 @@
+using System;
 using System.Web.Mvc;
 using library_online_system_asp_dot_net.DAOs;
 
@@ -14,11 +15,18 @@ namespace library_online_system_asp_dot_net.Controllers
                 return RedirectToAction("Error", "Home");
             }
 
+            ViewBag.successfullyRenting = TempData["rentSuccess"];
+            Console.WriteLine("something:fdfdfs: " + ViewBag.successfullyRenting);
             return View();
         }
 
-        public ActionResult ViewBookWithProcess(string process, string isbn)
+        public ActionResult ViewBookWithProcess()
         {
+            string process = Request.QueryString["process"];
+            string isbn = Request.QueryString["isbn"];
+            Console.WriteLine("process: " + process);
+            Console.WriteLine("isbn " + isbn);
+            
             if (process.Equals("rent"))
             {
                 ViewBag.rented = true;
@@ -41,7 +49,7 @@ namespace library_online_system_asp_dot_net.Controllers
                 return RedirectToAction("Error", "Home");
             }
 
-            return RedirectToAction("ViewBook");
+            return RedirectToAction("ViewBook", new {isbn=isbn});
 
         }
     }

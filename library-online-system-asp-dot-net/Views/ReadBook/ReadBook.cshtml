@@ -4,5 +4,15 @@
     ViewBag.Title = "title";
     Layout = "../Shared/_Layout.cshtml";
 }
+<a href="@Url.Action("ReadBook", "ReadBook", new {id=ViewBag.id, page=ViewBag.page - 1})">
+    <button class="btn btn-success">
+        Previous
+    </button>
+</a>
 
+<a href="@Url.Action("ReadBook", "ReadBook", new {id=ViewBag.id, page=ViewBag.page + 1})">
+    <button class="btn btn-success">
+        Next
+    </button>
+</a>
 <p>@ViewBag.bookContent</p>
