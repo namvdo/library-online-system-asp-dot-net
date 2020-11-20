@@ -1,0 +1,104 @@
+@using library_online_system_asp_dot_net.DAOs
+@using library_online_system_asp_dot_net.Models
+
+@{
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="~/Content/bookview.css">
+<div class="panel panel-default">
+    <div class="panel-body">
+        @{
+            Book book = (Book) ViewBag.book;
+
+            using (Html.BeginForm("Transact", "BookRenting", FormMethod.Post))
+            {
+                <div class="container">
+                    <article class="item-pane">
+                        <div class="item-preview">
+                            <div class="book">
+                                <img class="img-thumbnail" src="@book.CoverImage" alt="">
+                            </div>
+                        </div>
+                        <div class="item-details">
+                            <h1>@book.BookTitle</h1><span class="subtitle">by @BookDao.GetAuthorNameById(book.Author)</span>
+                            <div class="pane__section">
+                                <p>
+                                    @book.Description
+                                </p>
+                                <p>Publisher: @book.Publisher</p>
+                                <p>Rating: @BookDao.GetRatingByIsbn(book.Isbn)/5</p>
+                                <div class="renting-days">
+                                    <input type="hidden" name="isbn" value="@book.Isbn">
+                                    <input type="hidden" name="username" value="@Session["username"]">
+                                    <div class="box" border="1">
+                                        <input id="one" type="radio" name="renting-days" value="1" checked onclick="displayPrice(this)">
+                                        <span class="check"></span>
+                                        <label for="one">One day</label>
+                                    </div>
+                                    <div class="box" border="1">
+                                        <input id="two" type="radio" name="renting-days" value="3" onclick="displayPrice(this)">
+                                        <span class="check"></span>
+                                        <label for="two">Three days</label>
+                                    </div>
+                                    <div class="box" border="1">
+                                        <input type="radio" id="three" name="renting-days" value="7" onclick="displayPrice(this)">
+                                        <span class="check"></span>
+                                        <label for="three">Seven days</label>
+                                    </div>
+                                </div>
+
+                                @{
+                                    // if (ViewBag.rented != null && ViewBag.rented == true)
+                                    // {
+                                    
+                                    if (!ReservationDAO.CanReadBookNow((string) Session["username"], book.Isbn))
+                                    {
+                                        <a href="@Url.Action("Transact", "BookRenting", new {rentingTransaction = true})">
+                                            <button class="btn btn-secondary" type="submit">Rent it!</button>
+                                        </a>
+                                    }
+                                    else
+                                    {
+                                        <a href="@Url.Action("ReadBook", "ReadBook", new {id=BookDao.GetBookCopyMediumLengthId(book.Isbn), page=1}, null)">
+                                            <button class="btn btn-secondary">Read it!</button>
+                                        </a>
+                                    }
+@*                                     } *@
+@*                                     else *@
+@*                                     { *@
+@*                                         <a href="@Url.Action("Transact", "BookRenting", new {buyingTransaction = true})"> *@
+@*                                             <button class="btn btn-secondary" type="submit">Buy it!</button> *@
+@*                                         </a> *@
+@*                                     } *@
+                                }
+
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            }
+        }
+        @if (ViewBag.successfullyRenting != null && ViewBag.successfullyRenting == true)
+    {
+        <div class="alert-success">
+            <h4>Successfully renting a book, you can click
+                @Html.ActionLink(" here ", "ReadBook", "ReadBook", new {id=BookDao.GetBookCopyMediumLengthId(book.Isbn), page=1}, null)
+                to read it! </h4>
+        </div> 
+    }
+    </div>
+</div>
+<script>
+    const displayPrice = (element) => {
+        console.log(element);
+        console.log(element.id);
+        if (element.id === "one" && this.checked) {
+            alert("2$");
+        } else if (element.id === "two" && this.checked) {
+            document.write("3$");
+        } else if (element.id === "three" && this.checked) {
+            document.write("5$");
+        }
+    }
+</script>

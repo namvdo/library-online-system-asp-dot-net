@@ -95,5 +95,66 @@ namespace library_online_system_asp_dot_net.DAOs
 
             return borrowers;
         }
+        public static Borrower GetBorrowerByUsername(string username)
+        {
+            string sql = "select * from Borrower where username = '" + username + "'";
+            SqlCommand cmd = new SqlCommand(sql, InitConnection.GetInstance().GetConnection());
+
+            InitConnection.OpenConnection(GenericConnection);
+            SqlDataReader reader = cmd.ExecuteReader();
+            Borrower b = null;
+            if (reader.Read())
+            {
+                // get the results of each column
+                string name = (string)reader["name"];
+                string email = (string)reader["email"];
+                double deposit = (double)reader["deposit"];
+
+                b = new Borrower(username, name, email, deposit);
+            }
+            return b;
+        }
+
+        public static int UpdateBorrower(string name, string username, string email, double deposit)
+        {
+            string sql = "update Borrower" +
+                " set name=@name, email = @email, deposit = @deposit " +
+                " where username = @username";
+            SqlCommand cmd = new SqlCommand(sql, GenericConnection);
+            SqlParameter[] para = {
+                new SqlParameter("@name", SqlDbType.VarChar),
+                new SqlParameter("@email", SqlDbType.VarChar),
+                new SqlParameter("@deposit", SqlDbType.Float),
+                new SqlParameter("@username", SqlDbType.VarChar)
+            };
+            para[0].Value = name;
+            para[1].Value = email;
+            para[2].Value = deposit;
+            para[3].Value = username;
+
+            cmd.Parameters.AddRange(para);
+            InitConnection.OpenConnection(GenericConnection);
+            return cmd.ExecuteNonQuery();
+        }
+
+        public static int UpdateDeposit(string username,double amount)
+        {
+            string sql = "update Borrower" +
+                " set deposit = @deposit " +
+                " where username = @username";
+            SqlCommand cmd = new SqlCommand(sql, GenericConnection);
+            SqlParameter[] para = {
+                new SqlParameter("@deposit", SqlDbType.Float),
+                new SqlParameter("@username", SqlDbType.VarChar)
+            };
+            para[0].Value = amount;
+            para[1].Value = username;
+
+
+            cmd.Parameters.AddRange(para);
+            InitConnection.OpenConnection(GenericConnection);
+            return cmd.ExecuteNonQuery();
+        }
+
     }
 }

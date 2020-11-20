@@ -16,12 +16,22 @@ namespace library_online_system_asp_dot_net.Models
         [RegularExpression(@"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}")]
         public string Email { get; set; }
 
+        public double Deposit { get; set; }
+
         public Borrower(string username, string password, string fullname, string email)
         {
             this.Username = username;
             this.Password = password;
             this.Fullname = fullname;
             this.Email = email;
+        }
+
+        public Borrower(string username, string fullname, string email, double deposit)
+        {
+            Username = username;
+            Fullname = fullname;
+            Email = email;
+            Deposit = deposit;
         }
 
         public Borrower()

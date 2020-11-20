@@ -4,6 +4,8 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
 using library_online_system_asp_dot_net.Models;
 
 namespace library_online_system_asp_dot_net.DAOs
@@ -39,6 +41,7 @@ namespace library_online_system_asp_dot_net.DAOs
 
         public static Book GetBookByIsbn(string isbn)
         {
+            Console.WriteLine("isbn: " + isbn);
             var sql = "select top 1 * from Book where isbn=@isbn";
             using (SqlCommand cmd = new SqlCommand(sql, GetConnection()))
             {
@@ -49,6 +52,7 @@ namespace library_online_system_asp_dot_net.DAOs
                 return GetBookFromDataReader(reader).ElementAt(0);
             }
         }
+
         public static List<Book> GetTheMatchedBooks(string keyword)
         {
             List<Book> books = new List<Book>();
@@ -90,9 +94,9 @@ namespace library_online_system_asp_dot_net.DAOs
             string sql = "select  top 10 * from Book order by added_time desc";
             using (var command = new SqlCommand(sql, GetConnection()))
             {
-               command.Connection.Open();
-               SqlDataReader reader = command.ExecuteReader();
-               books = GetBookFromDataReader(reader);
+                command.Connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                books = GetBookFromDataReader(reader);
             }
 
             return books;
@@ -112,6 +116,7 @@ namespace library_online_system_asp_dot_net.DAOs
                 reader.Dispose();
                 return authorName;
             }
+
             reader.Dispose();
             return "";
         }
@@ -129,7 +134,6 @@ namespace library_online_system_asp_dot_net.DAOs
             {
                 return (float) reader.GetDouble(1);
             }
-
             return -1;
         }
 
@@ -147,8 +151,99 @@ namespace library_online_system_asp_dot_net.DAOs
             }
         }
 
+        public static string ReadBookFromPage(int bookCopyId, int page)
+        {
+            StringBuilder stringBuilder = new StringBuilder();
+            
+            string contentFromBook = "";
+            string sql = "select content from BookCopy where book_id=@id";
+            // bool isLastPage = false;
+            using (SqlCommand cmd = new SqlCommand(sql, GetConnection()))
+            {
+                cmd.Parameters.AddWithValue("@id", bookCopyId);
+                cmd.Connection.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    contentFromBook = (string) reader["content"];
+                }
+
+                int noOfCharactersPerPage = (int) GeneralInfo.NO_OF_CHARACTERS_PER_PAGE;
+                int totalPages = (int) Math.Ceiling((float) GetTotalBookLength(bookCopyId) / noOfCharactersPerPage);
+                if (page <= 0 || page > totalPages)
+                {
+                    return "";
+                }
+                // int noOfPages = (int) Math.Ceiling((double) contentFromBook.Length / noOfCharactersPerPage);
+                // if (page == noOfPages)
+                // {
+                //     isLastPage = true;
+                // }
+                int startingPosition = noOfCharactersPerPage * page -
+                                       noOfCharactersPerPage;
+                // int endingPosition = noOfCharactersPerPage * page - 1;
+                 
+
+                Regex regex = new Regex("([\\s.,-]+)");
+                // if (!isLastPage)
+                // {
+                //     while (true)
+                //     {
+                //         Console.WriteLine("something: " + regex.IsMatch(contentFromBook[endingPosition] + ""));
+                //         if (!regex.IsMatch(contentFromBook[endingPosition] + ""))
+                //         {
+                //             endingPosition++;
+                //         }
+                //         else
+                //         {
+                //             break;
+                //         }
+                //     } 
+                // }
+                Console.WriteLine("start: " + startingPosition + " end: " + startingPosition + noOfCharactersPerPage );
+                stringBuilder.Append(contentFromBook.Substring( startingPosition, noOfCharactersPerPage));
+
+            }
+            
+
+            return stringBuilder.ToString();
+        }
+
+        public static int GetTotalBookLength(int bookCopyId)
+        {
+            int length = 0;
+            string sql = "select datalength(content) from BookCopy where book_id = @id";
+            using (SqlCommand cmd = new SqlCommand(sql, InitConnection.GetInstance().GetConnection()))
+            {
+                cmd.Connection.Open();
+                cmd.Parameters.AddWithValue("@id", bookCopyId);
+                SqlDataReader reader = cmd.ExecuteReader();
+                length = reader.GetInt32(0);
+            }
+
+            return length;
+        }
+
+        public static int GetBookCopyMediumLengthId(string isbn)
+        {
+            Console.WriteLine("from getBook: " + isbn);
+            string sql = "select top 1 book_id from BookCopy where isbn=@isbn";
+            using (SqlCommand cmd = new SqlCommand(sql, GetConnection()))
+            {
+                cmd.Connection.Open();
+                cmd.Parameters.AddWithValue("@isbn", isbn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    return (int) reader["book_id"];
+                }
+            }
+
+            return -1;
+
+        }
         private static List<Book> GetBookFromDataReader(SqlDataReader reader)
-        { 
+        {
             List<Book> books = new List<Book>();
            while (reader.Read())
            {
@@ -407,6 +502,18 @@ namespace library_online_system_asp_dot_net.DAOs
             cmd.Parameters.AddRange(para);
             InitConnection.OpenConnection(GenericConnection);
             return cmd.ExecuteNonQuery();
+
+            while (reader.Read())
+            {
+                string isbn = (string) reader["isbn"];
+                string title = (string) reader["book_title"];
+                string publisher = (string) reader["publisher"];
+                int author = (int) reader["author_id"];
+                string description = (string) reader["description"];
+                string coverImg = (string) reader["cover_img"];
+                books.Add(new Book(isbn, title, publisher, author, description, coverImg));
+            }
+            return books;
         }
     }
 }

@@ -1,0 +1,87 @@
+﻿@{
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Add Fund</title>
+
+</head>
+<body>
+    <div class="container" style="margin-left: 300px;margin-top: 50px;width:800px">
+        <div class="row">
+            <div class="col-xs-12 col-md-4">
+                <div class="panel panel-default credit-card-box">
+                    <div class="panel-heading display-table">
+                        <div class="row display-tr">
+                            <h3 class="panel-title display-td">Payment Details</h3>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        @using (Html.BeginForm("AddFund", "Home", FormMethod.Post))
+                        {
+                            <form role="form" id="payment-form">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="form-group">
+                                            <label>Payment Amount</label>
+                                            <div class="input-group" style="width: 400px">
+                                                <input type="text" class="form-control" name="amount" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="form-group">
+                                            <label>Payment Methods</label>
+                                            <div class="input-group" style="width: 400px">
+                                                <input type="text" class="form-control" name="type" required>
+                                            </div>
+                                            <div class="display-td">
+                                                <img class="img-responsive pull-right" src="http://i76.imgup.net/accepted_c22e0.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="form-group">
+                                            <label>Date</label>
+                                            <div class="input-group" style="width: 400px">
+                                                <input type="text" class="form-control" name="date" readonly value="@DateTime.Now">
+                                                <span class="input-group-addon"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <button class="btn btn-success btn-lg btn-block" type="submit">Finish</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <p class="text-danger">@ViewBag.message</p>
+                                    </div>
+                                </div>
+                            </form>
+                        }
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+</body>
+</html>

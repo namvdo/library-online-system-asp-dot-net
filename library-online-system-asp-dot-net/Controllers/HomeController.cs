@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.EnterpriseServices.Internal;
 using System.Text.RegularExpressions;
@@ -35,6 +34,66 @@ namespace library_online_system_asp_dot_net.Controllers
             return View();
         }
 
+        public new ActionResult Profile()
+        {
+            string username = (string) Session["username"];
+            ViewBag.borrower = BorrowerDAO.GetBorrowerByUsername(username);
+            ViewBag.reservations = ReservationDAO.GetReservationByUsername(username);
+            ViewBag.reviews = ReviewDAO.GetReviewByUsername(username);
+            ViewBag.message = "";
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Profile(FormCollection f)
+        {
+            string username = (string) Session["username"];
+            string name = f["fullname"];
+            string email = f["email"];
+            double deposit = Convert.ToDouble(f["deposit"]);
+
+            if (BorrowerDAO.UpdateBorrower(name, username, email, deposit) > 0)
+            {
+                ViewBag.borrower = BorrowerDAO.GetBorrowerByUsername(username);
+                ViewBag.reservations = ReservationDAO.GetReservationByUsername(username);
+                ViewBag.message = "Update Successful!";
+            }
+            else
+            {
+                ViewBag.message = "Update Failed!";
+            }
+
+            return View();
+        }
+        
+        public ActionResult AddFund()
+        {
+            ViewBag.message = "";
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult AddFund(FormCollection f)
+        {
+            string username = (string)Session["username"];
+            double amount = Convert.ToDouble(f["amount"]);
+            string type = f["type"];
+            DateTime date = Convert.ToDateTime(f["date"]);
+            Payment p = new Payment(amount, username, date, type);
+            if (PaymentDAO.InsertPayment(p) > 0)
+            {
+                Borrower b = BorrowerDAO.GetBorrowerByUsername(username);
+                double NewDeposit = amount + b.Deposit;
+                BorrowerDAO.UpdateDeposit(username, NewDeposit);
+                ViewBag.message = "Payment Successfully !";
+            }
+            else
+            {
+                ViewBag.message = "Failed !!";
+            }
+            return View();
+        }
+
 
         [HttpGet]
         public ActionResult SearchResult(string keyword)
@@ -44,36 +103,9 @@ namespace library_online_system_asp_dot_net.Controllers
         }
 
 
-        public ActionResult ViewBook()
-        {
-            var isbn = Request.QueryString["isbn"];
-            ViewBag.book = BookDao.GetBookByIsbn(isbn);
-            var isRented = false;
-            var isBought = false;
-            if (Request.QueryString["rent"] != null && Request.QueryString["rent"].Equals("True"))
-            {
-                ViewBag.rented = true;
-                isRented = true;
-            }
-            
-
-            if (Request.QueryString["buy"] != null && Request.QueryString["buy"].Equals("True"))
-            {
-                ViewBag.bought = true;
-                isBought = true;
-            }
-
-            bool isWrongQs = Request.QueryString["buy"] != null || Request.QueryString["rent"] != null &&
-                !isBought && !isRented;
-            if (!isWrongQs) return View();
-            ViewBag.Message = "Invalid request, you can get nothing here.";
-            return RedirectToAction("Error");
-        }
-
         public ActionResult Error()
         {
             return View();
         }
-        
     }
 }
