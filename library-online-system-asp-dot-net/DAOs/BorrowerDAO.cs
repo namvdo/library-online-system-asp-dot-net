@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using library_online_system_asp_dot_net.Models;
@@ -9,7 +11,11 @@ namespace library_online_system_asp_dot_net.DAOs
 
     {
         private static readonly SqlConnection GenericConnection;
-
+        private static SqlConnection GetConnection()
+        {
+            var conStr = ConfigurationManager.ConnectionStrings["DBProvider"].ToString();
+            return new SqlConnection(conStr);
+        }
         static BorrowerDAO()
         {
             GenericConnection = InitConnection.GetInstance().GetConnection();
@@ -60,6 +66,35 @@ namespace library_online_system_asp_dot_net.DAOs
             return cmd.ExecuteReader().Read();
         }
 
+        public static List<Borrower> GetAllBorrowers()
+        {
+            List<Borrower> borrowers = new List<Borrower>();
+            string sql = "select * from Borrower";
+            using (SqlCommand cmd = new SqlCommand(sql, GetConnection()))
+            {
+                cmd.Connection.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                borrowers = GetBorrowerFromDataReader(reader);
+                reader.Dispose();
+            }
+
+            return borrowers;
+        }
+        private static List<Borrower> GetBorrowerFromDataReader(SqlDataReader reader)
+        {
+            List<Borrower> borrowers = new List<Borrower>();
+            while (reader.Read())
+            {
+                string username = (string)reader["username"];
+                string name = (string)reader["name"];
+                string email = (string)reader["email"];
+                double deposit = (double)reader["deposit"];
+                borrowers.Add(new Borrower(username, name, email, deposit));
+
+            }
+
+            return borrowers;
+        }
         public static Borrower GetBorrowerByUsername(string username)
         {
             string sql = "select * from Borrower where username = '" + username + "'";
@@ -120,7 +155,6 @@ namespace library_online_system_asp_dot_net.DAOs
             InitConnection.OpenConnection(GenericConnection);
             return cmd.ExecuteNonQuery();
         }
-
 
     }
 }
