@@ -25,7 +25,7 @@ namespace library_online_system_asp_dot_net.DAOs
             SqlDataReader reader = cmd.ExecuteReader();
             List<Reservation> reservations = new List<Reservation>();
             Reservation r = null;
-            if (reader.Read())
+            while (reader.Read())
             {
                 // get the results of each column
                 int id = (int)reader["id"];
