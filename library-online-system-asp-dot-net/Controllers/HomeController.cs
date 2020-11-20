@@ -41,6 +41,7 @@ namespace library_online_system_asp_dot_net.Controllers
             string username = (string)Session["username"];
             ViewBag.borrower = BorrowerDAO.GetBorrowerByUsername(username);
             ViewBag.reservations = ReservationDAO.GetReservationByUsername(username);
+            ViewBag.reviews = ReviewDAO.GetReviewByUsername(username);
             ViewBag.message = "";
             return View();
         }
@@ -66,6 +67,34 @@ namespace library_online_system_asp_dot_net.Controllers
              return View();
             
 
+        }
+        
+        public ActionResult AddFund()
+        {
+            ViewBag.message = "";
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult AddFund(FormCollection f)
+        {
+            string username = (string)Session["username"];
+            double amount = Convert.ToDouble(f["amount"]);
+            string type = f["type"];
+            DateTime date = Convert.ToDateTime(f["date"]);
+            Payment p = new Payment(amount, username, date, type);
+            if (PaymentDAO.InsertPayment(p) > 0)
+            {
+                Borrower b = BorrowerDAO.GetBorrowerByUsername(username);
+                double NewDeposit = amount + b.Deposit;
+                BorrowerDAO.UpdateDeposit(username, NewDeposit);
+                ViewBag.message = "Payment Successfully !";
+            }
+            else
+            {
+                ViewBag.message = "Failed !!";
+            }
+            return View();
         }
 
 
