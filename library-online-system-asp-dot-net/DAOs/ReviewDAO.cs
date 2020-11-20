@@ -7,38 +7,41 @@ using System.Web;
 
 namespace library_online_system_asp_dot_net.DAOs
 {
-    public static class ReservationDAO
+    public class ReviewDAO
     {
         private static readonly SqlConnection GenericConnection;
 
-        static ReservationDAO()
+        static ReviewDAO()
         {
             GenericConnection = InitConnection.GetInstance().GetConnection();
         }
 
-        public static List<Reservation> GetReservationByUsername(string username)
+        public static List<Review> GetReviewByUsername(string username)
         {
-            string sql = "select * from Reservation where username = '" + username + "'";
+            string sql = "select * from Review where username = '" + username + "'";
             SqlCommand cmd = new SqlCommand(sql, InitConnection.GetInstance().GetConnection());
 
             InitConnection.OpenConnection(GenericConnection);
             SqlDataReader reader = cmd.ExecuteReader();
-            List<Reservation> reservations = new List<Reservation>();
-            Reservation r = null;
+            List<Review> reviews = new List<Review>();
+            Review r = null;
             while (reader.Read())
             {
                 // get the results of each column
                 int id = (int)reader["id"];
+                string title = (string)reader["title"];
+                string content = (string)reader["content"];
+                DateTime date = (DateTime)reader["date"];
                 string isbn = (string)reader["isbn"];
-                DateTime create = (DateTime)reader["created_date"];
-                DateTime due = (DateTime)reader["due_date"];
-                int status = (int)reader["status"];
-                double amount = (double)reader["amount"];
 
-                r = new Reservation(id, username, isbn, create, due, status, amount);
-                reservations.Add(r);
+                //int score = (int)reader["score"];
+                int score = 5;                
+
+                r = new Review(id,title,content,date,isbn,username,score);
+                reviews.Add(r);
             }
-            return reservations;
+            return reviews;
         }
     }
+
 }

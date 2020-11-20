@@ -50,7 +50,9 @@
           <e p="BorrowerDAO.cs" t="Include" />
           <e p="CategoryDAO.cs" t="Include" />
           <e p="InitConnection.cs" t="Include" />
+          <e p="PaymentDAO.cs" t="Include" />
           <e p="ReservationDAO.cs" t="Include" />
+          <e p="ReviewDAO.cs" t="Include" />
           <e p="Utils.cs" t="Include" />
         </e>
         <e p="favicon.ico" t="Include" />
@@ -80,6 +82,7 @@
           <e p="GeneralInfo.cs" t="Include" />
           <e p="Payment.cs" t="Include" />
           <e p="Reservation.cs" t="Include" />
+          <e p="Review.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive" />
         <e p="packages.config" t="Include" />
@@ -113,6 +116,7 @@
           </e>
           <e p="Home" t="Include">
             <e p="About.cshtml" t="Include" />
+            <e p="AddFund.cshtml" t="Include" />
             <e p="Contact.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
             <e p="Profile.cshtml" t="Include" />

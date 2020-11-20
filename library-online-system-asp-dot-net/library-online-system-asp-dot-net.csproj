@@ -126,7 +126,9 @@
     <Compile Include="DAOs\CategoryDAO.cs" />
     <Compile Include="DAOs\InitConnection.cs" />
     <Compile Include="DAOs\BorrowerDAO.cs" />
+    <Compile Include="DAOs\PaymentDAO.cs" />
     <Compile Include="DAOs\ReservationDAO.cs" />
+    <Compile Include="DAOs\ReviewDAO.cs" />
     <Compile Include="DAOs\Utils.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -140,6 +142,7 @@
     <Compile Include="Models\Payment.cs" />
     <Compile Include="Models\Borrower.cs" />
     <Compile Include="Models\Reservation.cs" />
+    <Compile Include="Models\Review.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -201,6 +204,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Authentication\Register.cshtml" />
     <Content Include="Views\Home\Profile.cshtml" />
+    <Content Include="Views\Home\AddFund.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

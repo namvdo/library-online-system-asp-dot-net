@@ -102,6 +102,25 @@ namespace library_online_system_asp_dot_net.DAOs
             return cmd.ExecuteNonQuery();
         }
 
+        public static int UpdateDeposit(string username,double amount)
+        {
+            string sql = "update Borrower" +
+                " set deposit = @deposit " +
+                " where username = @username";
+            SqlCommand cmd = new SqlCommand(sql, GenericConnection);
+            SqlParameter[] para = {
+                new SqlParameter("@deposit", SqlDbType.Float),
+                new SqlParameter("@username", SqlDbType.VarChar)
+            };
+            para[0].Value = amount;
+            para[1].Value = username;
+
+
+            cmd.Parameters.AddRange(para);
+            InitConnection.OpenConnection(GenericConnection);
+            return cmd.ExecuteNonQuery();
+        }
+
 
     }
 }
