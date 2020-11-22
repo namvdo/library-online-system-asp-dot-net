@@ -11,11 +11,17 @@ namespace library_online_system_asp_dot_net.Controllers
         public ActionResult ReadBook(int id, int page)
         {
             Console.WriteLine("From read book: " + page);
+            Console.WriteLine("from read book: " + id);
             string bookContent = BookDao.ReadBookFromPage(id, page);
             ViewBag.bookContent = bookContent;
             ViewBag.page = page;
             ViewBag.id = id;
             ViewBag.size = (int) Math.Ceiling((float)BookDao.GetTotalBookLength(id) / (int) GeneralInfo.NO_OF_CHARACTERS_PER_PAGE);
+            return View();
+        }
+
+        public ActionResult ReadingProgress(string username, string isbn, float percent)
+        {
             return View();
         }
     }

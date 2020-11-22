@@ -20,8 +20,7 @@ namespace library_online_system_asp_dot_net.DAOs
         {
             string sql = "select * from Review where username = '" + username + "'";
             SqlCommand cmd = new SqlCommand(sql, InitConnection.GetInstance().GetConnection());
-
-            InitConnection.OpenConnection(GenericConnection);
+            cmd.Connection.Open();
             SqlDataReader reader = cmd.ExecuteReader();
             List<Review> reviews = new List<Review>();
             Review r = null;
@@ -41,6 +40,51 @@ namespace library_online_system_asp_dot_net.DAOs
                 reviews.Add(r);
             }
             return reviews;
+        }
+
+        public static List<Review> GetReviewsByIsbn(string isbn)
+        {
+            List<Review> list = new List<Review>();
+            string sql = "select * from Review where isbn=@isbn";
+            using (var cmd = new SqlCommand(sql, InitConnection.GetInstance().GetConnection()))
+            {
+                cmd.Connection.Open();
+                cmd.Parameters.AddWithValue("@isbn", isbn);
+                SqlDataReader read = cmd.ExecuteReader();
+                while (read.Read())
+                {
+                    string title = read.GetString(1);
+                    string content = read.GetString(2);
+                    DateTime date = read.GetDateTime(3);
+                    int score = read.GetInt16(6);
+                    Review review = new Review();
+                    review.Content = content;
+                    review.Title = title;
+                    review.Date = date;
+                    review.Score = score;
+                    list.Add(review);
+                }
+            }
+
+            return list;
+        }
+
+        public static bool InsertReview(string title, string content, DateTime date, string isbn, string username,
+            int score)
+        {
+            string sql = "insert into Review values(@a, @b, @c, @d, @e, @f)";
+            using (var cmd = new SqlCommand(sql, InitConnection.GetInstance().GetConnection()))
+            {
+                cmd.Connection.Open();
+                cmd.Parameters.AddWithValue("@a", title);
+                cmd.Parameters.AddWithValue("@b", content);
+                cmd.Parameters.AddWithValue("@c", date);
+                cmd.Parameters.AddWithValue("@d", isbn);
+                cmd.Parameters.AddWithValue("@e", username);
+                cmd.Parameters.AddWithValue("@f", score);
+                return cmd.ExecuteNonQuery() == 1;
+
+            }
         }
     }
 

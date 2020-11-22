@@ -99,8 +99,7 @@ namespace library_online_system_asp_dot_net.DAOs
         {
             string sql = "select * from Reservation where username = '" + username + "'";
             SqlCommand cmd = new SqlCommand(sql, InitConnection.GetInstance().GetConnection());
-
-            InitConnection.OpenConnection(GenericConnection);
+            cmd.Connection.Open();
             SqlDataReader reader = cmd.ExecuteReader();
             List<Reservation> reservations = new List<Reservation>();
             Reservation r = null;
@@ -111,10 +110,10 @@ namespace library_online_system_asp_dot_net.DAOs
                 string isbn = (string)reader["isbn"];
                 DateTime create = (DateTime)reader["created_date"];
                 DateTime due = (DateTime)reader["due_date"];
-                int status = (int)reader["status"];
+                
                 double amount = (double)reader["amount"];
 
-                r = new Reservation(id, username, isbn, create, due, status, amount);
+                r = new Reservation(id, username, isbn, create, due, 0, amount);
                 reservations.Add(r);
             }
             return reservations;

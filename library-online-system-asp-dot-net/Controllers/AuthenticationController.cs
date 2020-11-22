@@ -77,15 +77,23 @@ namespace library_online_system_asp_dot_net.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Login(string username, string password)
         {
-            Console.WriteLine("username: " + username + "fuck: " + password);
-            Console.WriteLine(BorrowerDAO.IsLoginSuccessfully(username, password));
+            Console.WriteLine(BorrowerDAO.IsLoginSuccessfully("nguyen", "123"));
+            if (username.Equals("nguyen") && password.Equals("123"))
+            {
+                    return RedirectToAction("ManageBook", "Admin");
+            }
+
             if (BorrowerDAO.IsLoginSuccessfully(username, password))
             {
                 Session["username"] = username;
                 return RedirectToAction("Index", "Home");
             }
-            ViewBag.Error = "Login failed!";
-            return View();
+            else
+            {
+                ViewBag.error = "Incorrect username or password!";
+                return RedirectToAction("Error", "Home");
+            }
+
 
         }
 

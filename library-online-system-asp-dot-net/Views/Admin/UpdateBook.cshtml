@@ -1,0 +1,126 @@
+@{
+    Layout = null;
+}
+@using library_online_system_asp_dot_net.Models;
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Update Book</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/AdminCSS/bootstrap.min.css">
+    <link href="~/AdminCSS/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/AdminCSS/style1.css">
+</head>
+<body>
+<div class="dashboard-main-wrapper">
+
+    <div class="dashboard-header">
+        <nav class="navbar navbar-expand-lg bg-white fixed-top">
+            <a class="navbar-brand" href="#">Open Library Admin</a>
+
+        </nav>
+    </div>
+
+    <div class="nav-left-sidebar sidebar-dark">
+        <div class="menu-list">
+            <nav class="navbar navbar-expand-lg navbar-light" style="font-size:large">
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav flex-column">
+
+                        <li class="nav-item ">
+                            <a class="nav-link " href="ManageBook">Manage Book</a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ManageUser">Manage User</a>
+
+                        </li>
+                        <li class="nav-item">
+                                                        @Html.ActionLink("Log out", "Logout", "Authentication", null, new {@class="nav-link"})
+                                                    </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    @{Book b = (Book)ViewBag.book;}
+    <div class="dashboard-wrapper">
+        <div class="dashboard-ecommerce">
+            <div class="container-fluid dashboard-content ">
+
+                <div class="ecommerce-widget">
+
+                    <div class="container" style="margin-top: 20px;width:800px; margin-left:250px">
+                        @using (Html.BeginForm("UpdateBook", "Admin", FormMethod.Post))
+                        {
+                            <div class="row">
+
+                                <div class="col-md-8 order-md-1">
+
+                                    <h1>Update Book</h1>
+
+                                    <div class="mb-3">
+                                        <label for="isbn">ISBN</label>
+                                        <input type="text" name="isbn" class="form-control" value="@b.Isbn" readonly>
+
+                                    </div>
+
+
+
+                                    <div class="mb-3">
+                                        <label for="title">Title <span class="text-muted"></span></label>
+                                        <input type="text" name="title" value="@b.BookTitle" class="form-control" required>
+
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="publisher">Publisher</label>
+                                        <input type="text" name="publisher" value="@b.Publisher" class="form-control" required>
+
+                                    </div>
+
+
+                                    <div class="mb-3">
+                                        <label for="description">Description <span class="text-muted"></span></label>
+                                        <textarea type="text" name="description" class="form-control" required>@b.Description</textarea>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="date">Add Date</label>
+                                        <input type="text" name="date" value="@DateTime.Now" class="form-control" readonly>
+
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="img">Cover_IMG</label>
+                                        <input type="text" name="img" value="@b.CoverImage" class="form-control" required="">
+
+                                    </div>
+
+                                    <input style="background-color: #4CAF50;
+                                               width: 200px;
+                                               border: none;
+                                               color: white;
+                                               padding: 15px 32px;
+                                               text-align: center;
+                                               text-decoration: none;
+                                               font-size: 16px;
+                                               margin-left: 300px;
+                                               cursor: pointer;" type="submit" value="Update">
+                                    <p class="text-success">@ViewBag.message</p>
+                                </div>
+                            </div>
+                        }
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

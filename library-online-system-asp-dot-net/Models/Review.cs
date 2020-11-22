@@ -15,6 +15,10 @@ namespace library_online_system_asp_dot_net.Models
         private string username;
         private int score;
 
+        public Review()
+        {
+        }
+
         public Review(int id, string title, string content, DateTime date, string isbn, string username, int score)
         {
             this.Id = id;

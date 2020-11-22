@@ -22,7 +22,7 @@
     <div class="container-login100">
         <div class="wrap-login100">
 
-            @using (Html.BeginForm("Login", "Authentication", FormMethod.Post, new {@class = "register-form", @id = "register-form"}))
+            @using (Html.BeginForm("Login", "Authentication", FormMethod.Post, new { @class = "register-form", @id = "register-form" }))
             {
                 @Html.AntiForgeryToken()
                 <span class="login100-form-title p-b-43">
@@ -31,18 +31,16 @@
 
 
                 <div class="wrap-input100 validate-input" data-validate="Valid username is required">
-                    @* <input class="input100" type="text" name="username"> *@
-                    @Html.TextBoxFor(borrower => borrower.Username, new {@class="input100"})
-                    <span class="focus-input100"></span>
-                    <span class="label-input100">Username</span>
+                     <input class="input100" type="text" name="username" placeholder="Username"> 
+                    @*<span class="focus-input100"></span>
+                    <span class="label-input100">Username</span>*@
                 </div>
 
 
                 <div class="wrap-input100 validate-input" data-validate="Password is required">
-                    @* <input class="input100" type="password" name="password"> *@
-                    @Html.PasswordFor(borrower => borrower.Password, new {@class="input100"})
-                    <span class="focus-input100"></span>
-                    <span class="label-input100">Password</span>
+                     <input class="input100" type="password" name="password" placeholder="Password"> 
+                    @*<span class="focus-input100"></span>
+                    <span class="label-input100">Password</span>*@
                 </div>
 
 
@@ -58,14 +56,8 @@
                     </span>
                 </div>
             }
-            <div class="login100-more" style="background-image: url('../../Images/bg-01.jpg')"></div>
+            <img style="height:400px;border-radius:20px;width:400px;margin-right:50px;" src="~/Images/bg-01.jpg" />
         </div>
-        @if (ViewBag.Error != null)
-        {
-            <div class="text-danger text-center">
-                @ViewBag.Error
-            </div>
-        }
     </div>
 </div>
 @Scripts.Render("~/bundles/jquery")

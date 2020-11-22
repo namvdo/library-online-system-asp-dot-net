@@ -47,20 +47,14 @@
                     <a class="dropdown-item" href="#">My Reading Stats</a>
                 </div>
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More</a>
-                <div class="dropdown-menu" aria-labelledby="dropdown09">
-                    <a class="dropdown-item" href="#">Add a Book</a>
-                    <a class="dropdown-item" href="#">Sponsor a Book</a>
-                    <a class="dropdown-item" href="#">Recent Community Edits</a>
-                    <a class="dropdown-item" href="#">Developer Center</a>
-                    <a class="dropdown-item" href="#">Help & Support</a>
-                </div>
-            </li>
         </ul>
-        <form class="form-inline my-2 my-md-0">
-            <input class="form-control" type="text" placeholder="Search a book, author..." aria-label="Search">
-        </form>
+        @* <form class="form-inline my-2 my-md-0"> *@
+        @*     <input class="form-control" type="text" placeholder="Search a book, author..." aria-label="Search"> *@
+        @* </form> *@
+        @using (Html.BeginForm("SearchResult", "Search", FormMethod.Get, new { @class = "form-inline my-2 my-md-0" }))
+                {
+                    <input type="text" class="form-control" name="keyword" placeholder="Search a book, author..." />
+                }
         @if (Session["username"] == null)
         {
             <ul class="navbar-nav">
@@ -74,29 +68,21 @@
         }
         else
         {
-            <ul>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">@Session["username"]</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdown09">
-                        @Html.ActionLink("View my profile", "Profile", "Home", null, new {@class="dropdown-menu", @aria_labelledby="dropdown09"})
-                        @Html.ActionLink("Add fund", "Profile", "Home", null, new {@class="dropdown-menu", @aria_labelledby="dropdown09"})
-                        @Html.ActionLink("Books I rent", "Profile", "Home", null, new {@class="dropdown-menu", @aria_labelledby="dropdown09"})
-                        @Html.ActionLink("My Books Reviews", "Profile", "Home", null, new {@class="dropdown-menu", @aria_labelledby="dropdown09"})
-                        
-                    </div>
-                </li>
-            </ul>
             <div class="collapse navbar-collapse" id="navbarsExample09">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Browse</a>
+                        <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">@Session["username"]</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown09">
-                            <a class="dropdown-item" href="#">Subject</a>
-                            <a class="dropdown-item" href="#">Random Book</a>
+                            @Html.ActionLink("View my profile", "Profile", "Home", null, new {@class="dropdown-item", @aria_labelledby="dropdown09"})
+                            @Html.ActionLink("Add fund", "AddFund", "Home", null, new {@class="dropdown-item", @aria_labelledby="dropdown09"})
+                            @Html.ActionLink("Books I rent", "Profile", "Home", null, new {@class="dropdown-item", @aria_labelledby="dropdown09"})
+                            @Html.ActionLink("My Books Reviews", "Profile", "Home", null, new {@class="dropdown-item", @aria_labelledby="dropdown09"})
+                            @Html.ActionLink("Log out", "Logout", "Authentication", null, new {@class="dropdown-item", @aria_labelledby="dropdown09"})
                         </div>
                     </li>
                 </ul>
                 </div>
+            
         }
     </div>
 </nav>

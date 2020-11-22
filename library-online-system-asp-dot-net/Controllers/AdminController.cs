@@ -10,10 +10,10 @@ namespace library_online_system_asp_dot_net.DAOs
     public class AdminController : Controller
     {
         // GET: Admin
-        public ActionResult Index()
-        {
-            return View();
-        }
+        // public ActionResult Index()
+        // {
+        //     return View();
+        // }
 
         public ActionResult ManageBook()
         {

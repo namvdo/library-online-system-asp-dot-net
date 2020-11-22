@@ -88,9 +88,8 @@ namespace library_online_system_asp_dot_net.DAOs
                 string username = (string)reader["username"];
                 string name = (string)reader["name"];
                 string email = (string)reader["email"];
-                double deposit = (double)reader["deposit"];
+                double deposit = (double) reader["deposit"];
                 borrowers.Add(new Borrower(username, name, email, deposit));
-
             }
 
             return borrowers;
@@ -99,8 +98,7 @@ namespace library_online_system_asp_dot_net.DAOs
         {
             string sql = "select * from Borrower where username = '" + username + "'";
             SqlCommand cmd = new SqlCommand(sql, InitConnection.GetInstance().GetConnection());
-
-            InitConnection.OpenConnection(GenericConnection);
+            cmd.Connection.Open();
             SqlDataReader reader = cmd.ExecuteReader();
             Borrower b = null;
             if (reader.Read())
@@ -115,6 +113,18 @@ namespace library_online_system_asp_dot_net.DAOs
             return b;
         }
 
+        public static bool LogInAsAdmin(string username, string pass)
+        {
+            string sql = "select * from Borrower where username=@username and password=@pass";
+            using (var cmd = new SqlCommand(sql, InitConnection.GetInstance().GetConnection()))
+            {
+                cmd.Connection.Open();
+                cmd.Parameters.AddWithValue("@username", username);
+                cmd.Parameters.AddWithValue("@pass", pass);
+                SqlDataReader reader = cmd.ExecuteReader();
+                return reader.Read();
+            }
+        }
         public static int UpdateBorrower(string name, string username, string email, double deposit)
         {
             string sql = "update Borrower" +

@@ -5,11 +5,15 @@
     <e p="C:\Users\Nam\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_library-online-system-asp-dot-net.2085737592.00" t="ExcludeRecursive" />
     <e p="C:\Users\Nam\AppData\Roaming\JetBrains\Rider2020.2\consoles\db" t="IncludeRecursive" />
     <e p="C:\Users\Nam\AppData\Roaming\JetBrains\Rider2020.2\extensions" t="IncludeRecursive" />
-    <e p="C:\Users\Nam\AppData\Roaming\JetBrains\Rider2020.2\javascript\extLibs\http_getbootstrap.com_docs_4.0_dist_css_bootstrap.css" t="IncludeRecursive" />
     <e p="C:\Users\Nam\Desktop\c# project\library-online-system-asp-dot-net" t="IncludeFlat">
       <e p=".git\info\exclude" t="IncludeRecursive" />
       <e p="library-online-system-asp-dot-net" t="IncludeRecursive">
         <e p=".gitignore" t="Include" />
+        <e p="AdminCSS" t="Include">
+          <e p="bootstrap.min.css" t="Include" />
+          <e p="style.css" t="Include" />
+          <e p="style1.css" t="Include" />
+        </e>
         <e p="App_Data" t="Include" />
         <e p="App_Start" t="Include">
           <e p="BundleConfig.cs" t="Include" />
@@ -39,10 +43,12 @@
           <e p="util.css" t="Include" />
         </e>
         <e p="Controllers" t="Include">
+          <e p="AdminController.cs" t="Include" />
           <e p="AuthenticationController.cs" t="Include" />
           <e p="BookRentingController.cs" t="Include" />
           <e p="HomeController.cs" t="Include" />
           <e p="ReadBookController.cs" t="Include" />
+          <e p="SearchController.cs" t="Include" />
           <e p="ViewBookController.cs" t="Include" />
         </e>
         <e p="DAOs" t="Include">
@@ -51,6 +57,7 @@
           <e p="CategoryDAO.cs" t="Include" />
           <e p="InitConnection.cs" t="Include" />
           <e p="PaymentDAO.cs" t="Include" />
+          <e p="ReadingLogDAO.cs" t="Include" />
           <e p="ReservationDAO.cs" t="Include" />
           <e p="ReviewDAO.cs" t="Include" />
           <e p="Utils.cs" t="Include" />
@@ -75,14 +82,15 @@
         <e p="Models" t="Include">
           <e p="Author.cs" t="Include" />
           <e p="Book.cs" t="Include" />
+          <e p="BookCategory.cs" t="Include" />
           <e p="Borrower.cs" t="Include" />
           <e p="Category.cs" t="Include" />
           <e p="Feedback.cs" t="Include" />
           <e p="Fine.cs" t="Include" />
-          <e p="GeneralInfo.cs" t="Include" />
           <e p="Payment.cs" t="Include" />
           <e p="Reservation.cs" t="Include" />
           <e p="Review.cs" t="Include" />
+          <e p="Utils.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive" />
         <e p="packages.config" t="Include" />
@@ -110,6 +118,12 @@
         </e>
         <e p="Views" t="Include">
           <e p="_ViewStart.cshtml" t="Include" />
+          <e p="Admin" t="Include">
+            <e p="AddBook.cshtml" t="Include" />
+            <e p="ManageBook.cshtml" t="Include" />
+            <e p="ManageUser.cshtml" t="Include" />
+            <e p="UpdateBook.cshtml" t="Include" />
+          </e>
           <e p="Authentication" t="Include">
             <e p="Login.cshtml" t="Include" />
             <e p="Register.cshtml" t="Include" />
@@ -124,6 +138,10 @@
           </e>
           <e p="ReadBook" t="Include">
             <e p="ReadBook.cshtml" t="Include" />
+            <e p="ReadingProgress.cshtml" t="Include" />
+          </e>
+          <e p="Search" t="Include">
+            <e p="SearchResult.cshtml" t="Include" />
           </e>
           <e p="Shared" t="Include">
             <e p="_Layout.cshtml" t="Include" />

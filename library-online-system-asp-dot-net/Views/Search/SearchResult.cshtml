@@ -1,0 +1,65 @@
+@model IEnumerable<library_online_system_asp_dot_net.Models.Book>
+@{
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800,900" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="~/fonts/search.css">
+
+<main role="main">
+
+    <section class="static about-sec">
+        <div class="container">
+
+            <div class="recomended-sec">
+
+                <div class="row">
+                   
+                      
+                            
+                                @foreach (var book in @ViewBag.books)
+                                {
+                                    <div class="item" >
+                                        <div  style="display:inline-block;width:300px;height:50px">
+                                            <img src="@book.CoverImage"  style="width:500px;padding-left:40px;padding-top:10px">
+                                            <a class="text-center" style="display:block;text-align:center;margin-left:35px;" href="~/Views/Home/BookDetail.cshtml">@book.BookTitle</a>
+                                            <div class="action">
+                                                <a href="@Url.Action("ViewBook", "ViewBook", new {rent = true, isbn=book.Isbn})">
+                                                    <button class="btn btn-success " style="margin-left:40px">Rent</button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                }
+                            
+                                  
+                </div>
+             </div>
+        </div>
+        <nav aria-label="Page navigation example" style="float:right">
+
+                <ul class="pagination">
+                    
+                    @for (var page = 1; page <= @ViewBag.NumberPage; page++)
+                    {
+                        <li class="page-item">
+                            @Html.ActionLink(page.ToString(), "SearchResult", "Search", new { i = page }, new {@class= "page-link" })
+
+                        </li>
+                    }
+                    
+                </ul>
+            
+            </nav>
+    </section>
+    <br />
+
+    
+
+
+</main>

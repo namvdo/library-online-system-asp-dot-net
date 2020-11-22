@@ -9,19 +9,29 @@ namespace library_online_system_asp_dot_net.Controllers
         // GET
         public ActionResult ViewBook(string isbn)
         {
-            ViewBag.book = BookDao.GetBookByIsbn(isbn);
-            if (ViewBag.book == null)
+            if (ViewBag.insertReview != null && ViewBag.insertReview == true)
             {
-                return RedirectToAction("Error", "Home");
+                ViewBag.mess = "Insert review successfully!";
             }
 
-            ViewBag.successfullyRenting = TempData["rentSuccess"];
-            Console.WriteLine("something:fdfdfs: " + ViewBag.successfullyRenting);
+                ViewBag.book = BookDao.GetBookByIsbn(isbn);
+                if (ViewBag.book == null)
+                {
+                    return RedirectToAction("Error", "Home");
+                }
+
+                ViewBag.successfullyRenting = TempData["rentSuccess"];
+                Console.WriteLine("something:fdfdfs: " + ViewBag.successfullyRenting);
+
             return View();
         }
 
         public ActionResult ViewBookWithProcess()
         {
+            if (Session["username"] == null)
+            {
+                return RedirectToAction("Login", "Authentication");
+            }
             string process = Request.QueryString["process"];
             string isbn = Request.QueryString["isbn"];
             Console.WriteLine("process: " + process);

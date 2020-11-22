@@ -1,0 +1,114 @@
+@{
+    Layout = null;
+}
+@model IEnumerable<library_online_system_asp_dot_net.Models.Book>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ADMIN</title>
+    <link rel="stylesheet" href="~/AdminCSS/bootstrap.min.css">
+    <link href="~/AdminCSS/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/AdminCSS/style1.css">
+
+</head>
+
+<body>
+    <div class="dashboard-main-wrapper">
+
+        <div class="dashboard-header">
+            <nav class="navbar navbar-expand-lg bg-white fixed-top">
+                <a class="navbar-brand" href="#">Open Library Admin</a>
+
+            </nav>
+        </div>
+
+        <div class="nav-left-sidebar sidebar-dark">
+            <div class="menu-list">
+                <nav class="navbar navbar-expand-lg navbar-light" style="font-size:large">
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav flex-column">
+
+                            <li class="nav-item ">
+                                <a class="nav-link " href="ManageBook">Manage Book</a>
+
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="ManageUser">Manage User</a>
+
+                            </li>
+                            <li class="nav-item">
+                                @Html.ActionLink("Log out", "Logout", "Authentication", null, new {@class="nav-link"})
+                            </li>
+
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <div class="dashboard-wrapper">
+            <div class="dashboard-ecommerce">
+                <div class="container-fluid dashboard-content ">
+
+                    <div class="ecommerce-widget">
+
+                        <div class="row" style="width:130%">
+                            <div class="col-xl-9 col-lg-12 col-md-6 col-sm-12 col-12">
+                                <div class="card">
+                                    <h1 class="card-header">Books</h1>
+                                    <div>
+                                        <a href="AddBook" class="btn btn-outline-success" style="float:right">Add Book</a>
+                                    </div>
+                                   
+                                    <div class="card-body p-0">
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <thead class="bg-light">
+                                                    <tr class="border-0">
+                                                        <th class="border-0">IMAGE</th>
+                                                        <th class="border-0">ISBN</th>
+                                                        <th class="border-0">Title</th>
+                                                        <th class="border-0">Publisher</th>
+                                                        <th class="border-0">Description</th>
+                                                        <th class="border-0">Add_Time</th>
+                                                        <th class="border-0">Update</th>
+                                                        <th class="border-0">Delete</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    @foreach (var book in @ViewBag.Books)
+                                                    {
+                                                        <tr>
+                                                            <td><img src="@book.CoverImage" style="width:70px" /></td>
+
+                                                            <td>@book.Isbn</td>
+                                                            <td>@book.BookTitle </td>
+                                                            <td>@book.Publisher</td>
+                                                            <td>@book.Description</td>
+                                                            <td>@book.Add_date</td>
+                                                            <td>@Html.ActionLink("Update book", "UpdateBook", "Admin", new { isbn = book.Isbn }, new { @class = "btn btn-outline-success" })</td>
+                                                            <td>@Html.ActionLink("Delete book", "DeleteBook", "Admin", new { isbn = book.Isbn }, new { @class = "btn btn-outline-success" })</td>
+                                                        </tr>
+                                                    }
+
+
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

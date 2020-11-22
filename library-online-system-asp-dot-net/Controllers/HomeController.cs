@@ -45,6 +45,18 @@ namespace library_online_system_asp_dot_net.Controllers
         }
 
         [HttpPost]
+        public ActionResult Review(FormCollection form)
+        {
+            string title = form["title"];
+            string user = form["username"];
+            string isbn = form["isbn"];
+            int score = int.Parse(form["score"]);
+            string content = form["content"];
+            bool inserted = ReviewDAO.InsertReview(title, content, DateTime.Now, isbn, user, score);
+            ViewBag.insertReview = inserted;
+            return RedirectToAction("ViewBook", "ViewBook", new {isbn=isbn});
+        }
+        [HttpPost]
         public ActionResult Profile(FormCollection f)
         {
             string username = (string) Session["username"];

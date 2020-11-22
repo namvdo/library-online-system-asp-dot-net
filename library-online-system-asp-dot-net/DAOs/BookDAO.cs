@@ -17,6 +17,7 @@ namespace library_online_system_asp_dot_net.DAOs
             var conStr = ConfigurationManager.ConnectionStrings["DBProvider"].ToString();
             return new SqlConnection(conStr);
         }
+
         private static readonly SqlConnection GenericConnection;
 
         static BookDao()
@@ -121,6 +122,24 @@ namespace library_online_system_asp_dot_net.DAOs
             return "";
         }
 
+        public static string GetAuthorName(string isbn)
+        {
+            string sql =
+                "select top 1 author_name from Author a inner join Book_Author ba on a.author_id = ba.author_id inner join Book b on ba.book_isbn = b.isbn where b.isbn = @isbn";
+            using (SqlCommand cmd = new SqlCommand(sql, InitConnection.GetInstance().GetConnection()))
+            {
+                cmd.Connection.Open();
+                cmd.Parameters.AddWithValue("@isbn", isbn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    return (string) reader["author_name"];
+                }
+            }
+
+            return "";
+        }
+
         public static float GetRatingByIsbn(string isbn)
         {
             string sql =
@@ -134,6 +153,7 @@ namespace library_online_system_asp_dot_net.DAOs
             {
                 return (float) reader.GetDouble(1);
             }
+
             return -1;
         }
 
@@ -150,11 +170,10 @@ namespace library_online_system_asp_dot_net.DAOs
                 return cmd.ExecuteReader();
             }
         }
-
         public static string ReadBookFromPage(int bookCopyId, int page)
         {
             StringBuilder stringBuilder = new StringBuilder();
-            
+
             string contentFromBook = "";
             string sql = "select content from BookCopy where book_id=@id";
             // bool isLastPage = false;
@@ -174,6 +193,7 @@ namespace library_online_system_asp_dot_net.DAOs
                 {
                     return "";
                 }
+                Console.WriteLine("total length: " + GetTotalBookLength(bookCopyId));
                 // int noOfPages = (int) Math.Ceiling((double) contentFromBook.Length / noOfCharactersPerPage);
                 // if (page == noOfPages)
                 // {
@@ -182,7 +202,7 @@ namespace library_online_system_asp_dot_net.DAOs
                 int startingPosition = noOfCharactersPerPage * page -
                                        noOfCharactersPerPage;
                 // int endingPosition = noOfCharactersPerPage * page - 1;
-                 
+
 
                 Regex regex = new Regex("([\\s.,-]+)");
                 // if (!isLastPage)
@@ -200,25 +220,83 @@ namespace library_online_system_asp_dot_net.DAOs
                 //         }
                 //     } 
                 // }
-                Console.WriteLine("start: " + startingPosition + " end: " + startingPosition + noOfCharactersPerPage );
-                stringBuilder.Append(contentFromBook.Substring( startingPosition, noOfCharactersPerPage));
+                Console.WriteLine("start: " + startingPosition + " end: " + Math.Min(startingPosition + noOfCharactersPerPage, GetTotalBookLength(bookCopyId)));
+                if (startingPosition + noOfCharactersPerPage >= GetTotalBookLength(bookCopyId))
+                {
+                    noOfCharactersPerPage = GetTotalBookLength(bookCopyId) - startingPosition;
+                }
+                stringBuilder.Append(contentFromBook.Substring(startingPosition,   noOfCharactersPerPage));
+                
 
             }
-            
+            Console.WriteLine("content: " + contentFromBook);
 
             return stringBuilder.ToString();
         }
 
+        public static List<Book> GetBookIRent(string username)
+        {
+            string sql =
+                "select distinct Book.* from Book inner join Reservation R2 on Book.isbn = R2.isbn where R2.username = @username and due_date >= @date";
+            using (var cmd = new SqlCommand(sql, InitConnection.GetInstance().GetConnection()))
+            {
+                cmd.Connection.Open();
+                cmd.Parameters.AddWithValue("@username", username);
+                cmd.Parameters.AddWithValue("@date", DateTime.Now);
+                SqlDataReader reader = cmd.ExecuteReader();
+                return GetBookFromDataReader(reader);
+            }
+        }
+
+        public static Book GetBookByBookCopyId(int copyId)
+        {
+            string sql =
+                "select top 1 * from Book inner join BookCopy BC on Book.isbn = BC.isbn where BC.book_id = @copyId";
+            using (var cmd = new SqlCommand(sql, InitConnection.GetInstance().GetConnection()))
+            {
+                cmd.Connection.Open();
+                cmd.Parameters.AddWithValue("@copyId", copyId);
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    if (GetBookFromDataReader(reader).Count != 0)
+                    {
+                        return GetBookFromDataReader(reader).ElementAt(0);
+                    }
+                }
+
+                return null;
+            }
+        }
+
+        public static List<Book> GetBooksByCategoryf(string cName)
+        {
+            string sql =
+                "select * from Category c inner join Book_Category BC on c.category_name = BC.category_name inner join Book on Book.isbn = BC.isbn where c.category_name = @cName";
+            using (var cmd = new SqlCommand(sql, InitConnection.GetInstance().GetConnection()))
+            {
+                cmd.Connection.Open();
+                cmd.Parameters.AddWithValue("@cName", cName);
+                SqlDataReader read = cmd.ExecuteReader();
+                return GetBookFromDataReader(read);
+            }
+        }
         public static int GetTotalBookLength(int bookCopyId)
         {
             int length = 0;
-            string sql = "select datalength(content) from BookCopy where book_id = @id";
+            Console.WriteLine("copy id: " + bookCopyId);
+            string sql = "select datalength(content) as [count] from BookCopy where book_id = @id";
             using (SqlCommand cmd = new SqlCommand(sql, InitConnection.GetInstance().GetConnection()))
             {
                 cmd.Connection.Open();
                 cmd.Parameters.AddWithValue("@id", bookCopyId);
                 SqlDataReader reader = cmd.ExecuteReader();
-                length = reader.GetInt32(0);
+                if (reader.Read())
+                {
+                    length = (int) reader["count"];
+                }
+
+                reader.Dispose();
             }
 
             return length;
@@ -242,29 +320,31 @@ namespace library_online_system_asp_dot_net.DAOs
             return -1;
 
         }
+
         private static List<Book> GetBookFromDataReader(SqlDataReader reader)
         {
             List<Book> books = new List<Book>();
-           while (reader.Read())
-           {
-               string isbn = (string) reader["isbn"];
-               string title = (string) reader["book_title"];
-               string publisher = (string) reader["publisher"];
-               string description = (string) reader["description"];
-               string coverImg = (string) reader["cover_img"];
-                DateTime date = (DateTime)reader["added_time"]; 
-                books.Add(new Book(isbn, title, publisher, description, coverImg,date));
-           }
+            while (reader.Read())
+            {
+                string isbn = (string) reader["isbn"];
+                string title = (string) reader["book_title"];
+                string publisher = (string) reader["publisher"];
+                string description = (string) reader["description"];
+                string coverImg = (string) reader["cover_img"];
+                DateTime date = (DateTime) reader["added_time"];
+                books.Add(new Book(isbn, title, publisher, description, coverImg, date));
+            }
 
-           return books;
+            return books;
         }
+
         private static Author GetAuthorFromDataReader(SqlDataReader reader)
         {
             Author authors = null;
             if (reader.Read())
             {
-                int id = (int)reader["author_id"];
-                string name = (string)reader["author_name"];
+                int id = (int) reader["author_id"];
+                string name = (string) reader["author_name"];
 
                 authors = new Author(id, name);
             }
@@ -290,18 +370,18 @@ namespace library_online_system_asp_dot_net.DAOs
         //    return books;
 
         //}
-        public static List<Book> GetPaging(int index,string keyword)
+        public static List<Book> GetPaging(int index, string keyword)
         {
             List<Book> books = new List<Book>();
             string sql = "select * from Book b join Book_Author ba on b.isbn = ba.book_isbn join Author au on" +
-                " ba.author_id = au.author_id where isbn like @keyword1 or author_name like @keyword2" +
-                " or book_title  like @keyword3 " +
-                " order by isbn " +
-                " OFFSET @index ROW  FETCH FIRST 6 ROWS ONLY";
+                         " ba.author_id = au.author_id where isbn like @keyword1 or author_name like @keyword2" +
+                         " or book_title  like @keyword3 " +
+                         " order by isbn " +
+                         " OFFSET @index ROW  FETCH FIRST 6 ROWS ONLY";
 
             using (SqlCommand cmd = new SqlCommand(sql, GetConnection()))
             {
-                cmd.Parameters.AddWithValue("@index",  (index-1)*6 );
+                cmd.Parameters.AddWithValue("@index", (index - 1) * 6);
                 cmd.Parameters.AddWithValue("@keyword1", "%" + keyword + "%");
                 cmd.Parameters.AddWithValue("@keyword2", "%" + keyword + "%");
                 cmd.Parameters.AddWithValue("@keyword3", "%" + keyword + "%");
@@ -310,41 +390,48 @@ namespace library_online_system_asp_dot_net.DAOs
                 books = GetBookFromDataReader(reader);
                 reader.Dispose();
             }
+
             return books;
         }
+
         public static int GetNumberPage(string keyword)
         {
             string sql = "select COUNT(*) from Book b join Book_Author ba on b.isbn = ba.book_isbn join Author au on" +
-                " ba.author_id = au.author_id where isbn like @keyword1 or author_name like @keyword2" +
-                " or book_title  like @keyword3";
+                         " ba.author_id = au.author_id where isbn like @keyword1 or author_name like @keyword2" +
+                         " or book_title  like @keyword3";
             SqlCommand cmd = new SqlCommand(sql, GetConnection());
             cmd.Parameters.AddWithValue("@keyword1", "%" + keyword + "%");
             cmd.Parameters.AddWithValue("@keyword2", "%" + keyword + "%");
             cmd.Parameters.AddWithValue("@keyword3", "%" + keyword + "%");
             cmd.Connection.Open();
-           SqlDataReader reader = cmd.ExecuteReader();
-           
+            SqlDataReader reader = cmd.ExecuteReader();
+
             while (reader.Read())
             {
                 int total = reader.GetInt32(0);
                 int countPage = 0;
                 countPage = total / 6;
-                if(total % 6 !=0)
+                if (total % 6 != 0)
                 {
                     countPage++;
                 }
+
                 return countPage;
             }
+
             reader.Dispose();
 
             return 0;
 
         }
+
         public static int InsertBook(Book book)
         {
-            string sql = "insert into Book(isbn,book_title,publisher,description,cover_img,added_time) values(@isbn,@title,@pub,@des,@img,@date)";
+            string sql =
+                "insert into Book(isbn,book_title,publisher,description,cover_img,added_time) values(@isbn,@title,@pub,@des,@img,@date)";
             SqlCommand cmd = new SqlCommand(sql, GenericConnection);
-            SqlParameter[] para = {
+            SqlParameter[] para =
+            {
                 new SqlParameter("@isbn", SqlDbType.VarChar),
                 new SqlParameter("@title", SqlDbType.NVarChar),
                 new SqlParameter("@pub", SqlDbType.VarChar),
@@ -364,43 +451,49 @@ namespace library_online_system_asp_dot_net.DAOs
             InitConnection.OpenConnection(GenericConnection);
             return cmd.ExecuteNonQuery();
         }
+
         public static int InsertBookCategory(BookCategory bc)
         {
             string sql = "insert into Book_Category(isbn,category_name) values (@isbn,@category_name)";
             SqlCommand cmd = new SqlCommand(sql, GenericConnection);
-            SqlParameter[] para = {
+            SqlParameter[] para =
+            {
                 new SqlParameter("@isbn", SqlDbType.VarChar),
                 new SqlParameter("@category_name", SqlDbType.NVarChar),
-               
+
 
             };
             para[0].Value = bc.Isbn;
             para[1].Value = bc.Name;
-         
+
             cmd.Parameters.AddRange(para);
             InitConnection.OpenConnection(GenericConnection);
             return cmd.ExecuteNonQuery();
         }
+
         public static int InsertAuthor(string authorname)
         {
             string sql = "insert into Author(author_name)  values (@name)";
             SqlCommand cmd = new SqlCommand(sql, GenericConnection);
-            SqlParameter[] para = {
+            SqlParameter[] para =
+            {
                 new SqlParameter("@name", SqlDbType.NVarChar),
-             };
-            para[0].Value =authorname;
+            };
+            para[0].Value = authorname;
             cmd.Parameters.AddRange(para);
             InitConnection.OpenConnection(GenericConnection);
             return cmd.ExecuteNonQuery();
         }
-        public static int InsertBookAuthor(string isbn,int id)
+
+        public static int InsertBookAuthor(string isbn, int id)
         {
             string sql = "insert into Book_Author(book_isbn,author_id) values(@isbn,@id)";
             SqlCommand cmd = new SqlCommand(sql, GenericConnection);
-            SqlParameter[] para = {
+            SqlParameter[] para =
+            {
                 new SqlParameter("@isbn", SqlDbType.VarChar),
-                 new SqlParameter("@id", SqlDbType.Int)
-             };
+                new SqlParameter("@id", SqlDbType.Int)
+            };
             para[0].Value = isbn;
             para[1].Value = id;
 
@@ -408,41 +501,44 @@ namespace library_online_system_asp_dot_net.DAOs
             InitConnection.OpenConnection(GenericConnection);
             return cmd.ExecuteNonQuery();
         }
+
         public static Author GetAuthorByName(string name)
         {
             Author author = null;
             var sql = "select * from Author where author_name=@name";
             using (SqlCommand cmd = new SqlCommand(sql, GetConnection()))
             {
-                var para = new SqlParameter("@name", SqlDbType.NVarChar) { Value = name };
+                var para = new SqlParameter("@name", SqlDbType.NVarChar) {Value = name};
                 cmd.Parameters.Add(para);
                 cmd.Connection.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
                 author = GetAuthorFromDataReader(reader);
                 reader.Dispose();
             }
+
             return author;
         }
 
         public static int UpdateBook(Book b, string isbn)
         {
             string sql = "UPDATE [dbo].[Book]" +
-                "  Set [book_title] = @title" +
-                " ,[publisher] = @publisher" +
-                " ,[description] = @des" +
-                " ,[cover_img] = @img" +
-                " ,[added_time] = @date" +
-                " WHERE[isbn] = @isbn";
+                         "  Set [book_title] = @title" +
+                         " ,[publisher] = @publisher" +
+                         " ,[description] = @des" +
+                         " ,[cover_img] = @img" +
+                         " ,[added_time] = @date" +
+                         " WHERE[isbn] = @isbn";
             SqlCommand cmd = new SqlCommand(sql, GenericConnection);
-            SqlParameter[] para = {
+            SqlParameter[] para =
+            {
                 new SqlParameter("@title", SqlDbType.VarChar),
-                 new SqlParameter("@publisher", SqlDbType.VarChar),
-                 new SqlParameter("@des", SqlDbType.VarChar),
-                 new SqlParameter("@img", SqlDbType.VarChar),
-                 new SqlParameter("@date", SqlDbType.DateTime),
-                 new SqlParameter("@isbn", SqlDbType.VarChar),
+                new SqlParameter("@publisher", SqlDbType.VarChar),
+                new SqlParameter("@des", SqlDbType.VarChar),
+                new SqlParameter("@img", SqlDbType.VarChar),
+                new SqlParameter("@date", SqlDbType.DateTime),
+                new SqlParameter("@isbn", SqlDbType.VarChar),
 
-             };
+            };
             para[0].Value = b.BookTitle;
             para[1].Value = b.Publisher;
             para[2].Value = b.Description;
@@ -459,12 +555,13 @@ namespace library_online_system_asp_dot_net.DAOs
         public static int DeleteBook(string isbn)
         {
             string sql = "Delete from [dbo].[Book]" +
-                " WHERE[isbn] = @isbn";
+                         " WHERE[isbn] = @isbn";
             SqlCommand cmd = new SqlCommand(sql, GenericConnection);
-            SqlParameter[] para = {
-                 new SqlParameter("@isbn", SqlDbType.VarChar),
+            SqlParameter[] para =
+            {
+                new SqlParameter("@isbn", SqlDbType.VarChar),
 
-             };
+            };
             para[0].Value = isbn;
 
             cmd.Parameters.AddRange(para);
@@ -475,12 +572,13 @@ namespace library_online_system_asp_dot_net.DAOs
         public static int DeleteBookAuthor(string isbn)
         {
             string sql = "Delete from [dbo].[Book_Author]" +
-                " WHERE[book_isbn] = @isbn";
+                         " WHERE[book_isbn] = @isbn";
             SqlCommand cmd = new SqlCommand(sql, GenericConnection);
-            SqlParameter[] para = {
-                 new SqlParameter("@isbn", SqlDbType.VarChar),
+            SqlParameter[] para =
+            {
+                new SqlParameter("@isbn", SqlDbType.VarChar),
 
-             };
+            };
             para[0].Value = isbn;
 
             cmd.Parameters.AddRange(para);
@@ -491,29 +589,18 @@ namespace library_online_system_asp_dot_net.DAOs
         public static int DeleteBookCategory(string isbn)
         {
             string sql = "Delete from [dbo].[Book_Category]" +
-                " WHERE[isbn] = @isbn";
+                         " WHERE[isbn] = @isbn";
             SqlCommand cmd = new SqlCommand(sql, GenericConnection);
-            SqlParameter[] para = {
-                 new SqlParameter("@isbn", SqlDbType.VarChar),
+            SqlParameter[] para =
+            {
+                new SqlParameter("@isbn", SqlDbType.VarChar),
 
-             };
+            };
             para[0].Value = isbn;
 
             cmd.Parameters.AddRange(para);
             InitConnection.OpenConnection(GenericConnection);
             return cmd.ExecuteNonQuery();
-
-            while (reader.Read())
-            {
-                string isbn = (string) reader["isbn"];
-                string title = (string) reader["book_title"];
-                string publisher = (string) reader["publisher"];
-                int author = (int) reader["author_id"];
-                string description = (string) reader["description"];
-                string coverImg = (string) reader["cover_img"];
-                books.Add(new Book(isbn, title, publisher, author, description, coverImg));
-            }
-            return books;
         }
     }
 }
